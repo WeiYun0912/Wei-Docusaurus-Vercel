@@ -9,7 +9,7 @@ const config = {
   title: "WeiWei 的前端程式教學與筆記",
   // staticDirectories: ["static"],
   tagline: "Wei Site",
-  // url: "https://github.com",
+  url: "https://example.com",
   // url: "https://weiyun0912.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
