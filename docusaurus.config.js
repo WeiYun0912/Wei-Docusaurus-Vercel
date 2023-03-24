@@ -71,7 +71,7 @@ const config = {
         { name: "robots", content: "max-image-preview:large" },
         {
           name: "google-site-verification",
-          content: "VX8z24uxBmMEFgahr7WrkZnwoob8dsilOzb6w4r8k5k",
+          content: "x-ixmfx_RxJcLkVfVr6vOe1KtkiSQj87GzDpzk1yte8",
         },
       ],
       colorMode: {
