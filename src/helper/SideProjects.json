@@ -86,6 +86,40 @@
   },
   {
     "id": 6,
+    "projectTitle": "3D-Portfolio Clone",
+    "projectDescribe": "觀看 Youtube 的 Clone 影片，Clone 出 3D Portfolio，初步的認識如何使用 React 做出 3D 網站，也將影片中學習到的技術與套件使用到自己的個人網站上。",
+    "projectImage": "img/projects/3DPortfolio.png",
+    "tech": [
+      {
+        "name": "React",
+        "color": "#0081B4"
+      },
+      {
+        "name": "three",
+        "color": "#EBB02D"
+      }
+    ],
+    "githubUrl": "https://github.com/WeiYun0912/3D-Portfolio"
+  },
+  {
+    "id": 7,
+    "projectTitle": "3D-Shirt Clone",
+    "projectDescribe": "觀看 Youtube 的 Clone 影片，Clone 出 3D Shirt，也學到怎麼使用 OpenAI 自動產生圖片並顯示在 3D 物件上。",
+    "projectImage": "img/projects/3DShirt.png",
+    "tech": [
+      {
+        "name": "React",
+        "color": "#0081B4"
+      },
+      {
+        "name": "three",
+        "color": "#EBB02D"
+      }
+    ],
+    "githubUrl": "https://github.com/WeiYun0912/3D-Shirt-Clone"
+  },
+  {
+    "id": 8,
     "projectTitle": "電影介紹 APP",
     "projectDescribe": "第一個React Native專案，學習如何使用 React Native Expo 進行開發，在開發結束將專案打包成APK檔案時，發現 Expo 預設產生的 APK 檔案非常大，於是寫了一篇使用原生 React Native 打包 APK 的文章給自己看。",
     "projectImage": "img/projects/MovieAPP.png",
@@ -98,7 +132,7 @@
     "githubUrl": "https://github.com/WeiYun0912/React-Native-Wei-Movies"
   },
   {
-    "id": 7,
+    "id": 9,
     "projectTitle": "圖書 APP",
     "projectDescribe": "因家人有買書的習慣，但常常會忘記該本書是否已經買過，導致又買了一樣的書，為了解決此問題，用了 React Native 製作一款APP供家人使用，將書籍資料建檔以後即可在該APP查詢，透過手機掃描書籍ISBN號碼後，可以進行本地搜尋或線上搜尋來確認這本書是否已經購買過。",
     "projectImage": "img/projects/NativeBook.png",
@@ -131,7 +165,24 @@
     "githubUrl": "https://github.com/WeiYun0912/React-Native-Book"
   },
   {
-    "id": 8,
+    "id": 10,
+    "projectTitle": "寶可夢資料查詢網站",
+    "projectDescribe": "在玩遊戲的時候發現有些遊戲的資料不太好查詢，於是使用 puppeteer 爬蟲將相關的資料爬取下來後彙整，並使用 React 製成網頁公開分享給大家去使用，也製作了英文和中文語系的切換，這也是自己第一次使用 react-i18next。",
+    "projectImage": "img/projects/PokemonEV.png",
+    "tech": [
+      {
+        "name": "React",
+        "color": "#0081B4"
+      },
+      {
+        "name": "Puppeteer",
+        "color": "#7FB77E"
+      }
+    ],
+    "githubUrl": "https://github.com/WeiYun0912/pokemon-scarlet-and-violet-ev-list"
+  },
+  {
+    "id": 11,
     "projectTitle": "怪獸電力公司 刻板練習",
     "projectDescribe": "在閒暇之餘喜歡挑戰自己對於 CSS 的熟悉程度，所以都會找喜歡的卡通或電影來製作一個簡單的 Landing Page。",
     "projectImage": "img/projects/MonsterInc.png",
@@ -152,7 +203,7 @@
     "githubUrl": "https://github.com/WeiYun0912/Monster-Inc"
   },
   {
-    "id": 9,
+    "id": 12,
     "projectTitle": "辛普森家庭 刻板練習",
     "projectDescribe": "在閒暇之餘喜歡挑戰自己對於 CSS 的熟悉程度，所以都會找喜歡的卡通或電影來製作一個簡單的 Landing Page。",
     "projectImage": "img/projects/Simpsons.png",
