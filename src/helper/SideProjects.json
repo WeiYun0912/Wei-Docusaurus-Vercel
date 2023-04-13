@@ -183,6 +183,30 @@
   },
   {
     "id": 11,
+    "projectTitle": "Disney Plus TMDB Review (Chrome Extension)",
+    "projectDescribe": "練習如何開發瀏覽器擴充套件(Chrome)，該擴充套件使用了 TMDB API 來查詢電影的相關資料，進入到 Disney Plus 頁面，電影的右上角就會有電影的總評分，將滑鼠移至電影上，會有評分人數、電影釋出日期及電影知名度分數的資料。",
+    "projectImage": "img/projects/DisneyPlusTMDB.png",
+    "tech": [
+      {
+        "name": "HTML",
+        "color": "#FF1E00"
+      },
+      {
+        "name": "CSS",
+        "color": "#0096FF"
+      },
+      {
+        "name": "JavaScript",
+        "color": "#E6B325"
+      },
+      {
+        "name": "Chrome Extension",
+        "color": "#EA5455"
+      }
+    ]
+  },
+  {
+    "id": 12,
     "projectTitle": "怪獸電力公司 刻板練習",
     "projectDescribe": "在閒暇之餘喜歡挑戰自己對於 CSS 的熟悉程度，所以都會找喜歡的卡通或電影來製作一個簡單的 Landing Page。",
     "projectImage": "img/projects/MonsterInc.png",
@@ -203,7 +227,7 @@
     "githubUrl": "https://github.com/WeiYun0912/Monster-Inc"
   },
   {
-    "id": 12,
+    "id": 13,
     "projectTitle": "辛普森家庭 刻板練習",
     "projectDescribe": "在閒暇之餘喜歡挑戰自己對於 CSS 的熟悉程度，所以都會找喜歡的卡通或電影來製作一個簡單的 Landing Page。",
     "projectImage": "img/projects/Simpsons.png",
