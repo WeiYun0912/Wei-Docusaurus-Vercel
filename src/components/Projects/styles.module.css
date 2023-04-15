@@ -152,6 +152,13 @@
   gap: 0.5rem;
 }
 
+.award {
+  font-size: 15px;
+  color: #393e46;
+
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .button {
     padding: 0.75rem 1.5rem;

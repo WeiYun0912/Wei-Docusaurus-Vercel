@@ -4,7 +4,6 @@ import { useColorMode } from "@docusaurus/theme-common";
 import Tilt from "react-tilt";
 const Projects = ({ ProjectsData, title }) => {
   const { colorMode } = useColorMode();
-  console.log(colorMode);
   return (
     <div className={styles.features}>
       <div className="container">
@@ -31,6 +30,7 @@ const ProjectCard = ({
   githubUrl,
   channelUrl,
   colorMode,
+  awards,
 }) => {
   return (
     <Tilt
@@ -52,8 +52,12 @@ const ProjectCard = ({
       <div className={styles.tiltContentContainer}>
         <h3 className={styles.tiltTitle}>{projectTitle}</h3>
         <p className={styles.tiltDesc}>{projectDescribe}</p>
+
         {role && <p className={styles.tiltRole}>擔任的角色：{role}</p>}
       </div>
+
+      {awards && awards.map((award) => <p className={styles.award}>{award}</p>)}
+
       {githubUrl && (
         <a href={githubUrl} target="_blank" rel="noreferrer noopenner">
           <button

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "projectTitle": "去中心化二手車交易與管理平台",
-    "projectDescribe": "使用以太坊私有鏈打造一個去中心化二手車交易與管理平台，透過跟特定廠商合作來使汽車維修和保養的資料透明公開，使消費者在購買二手車時能夠信任該部汽車的車主，該專題最後也演變成我碩士論文的題目。",
+    "projectDescribe": "使用以太坊私有鏈打造一個去中心化二手車交易與管理平台，透過跟特定廠商合作來使汽車維修和保養的資料透明公開，使消費者在購買二手車時能夠信任該部汽車的車主。",
     "projectImage": "img/projects/DVM.png",
     "projectUrl": "https://www.cakeresume.com/portfolios/bde04b",
     "tech": [
@@ -28,7 +28,8 @@
       }
     ],
     "role": "全端",
-    "videoUrl": "https://www.youtube.com/watch?v=-kcfoJK1nhs"
+    "videoUrl": "https://www.youtube.com/watch?v=-kcfoJK1nhs",
+    "awards": ["🎉 資訊應用服務創新競賽 入圍亞太中文組"]
   },
   {
     "id": 2,
@@ -50,7 +51,12 @@
       }
     ],
     "role": "全端",
-    "projectUrl": "https://www.cakeresume.com/portfolios/bde04b"
+    "projectUrl": "https://www.cakeresume.com/portfolios/bde04b",
+    "awards": [
+      "🏅 資料創新應用競賽 多元氣象服務組-銅獎",
+      "🏅 校內專題競賽(三) 第一名",
+      "🏅 校內專題競賽(二) 第二名"
+    ]
   },
 
   {
@@ -68,7 +74,11 @@
         "color": "#C92C6D"
       }
     ],
-    "role": "後端"
+    "role": "後端",
+    "awards": [
+      "🏅 亞洲跨國際黑克松 入圍台灣前五名",
+      "🏅 亞洲跨國際黑克松 最佳黑客獎"
+    ]
   },
   {
     "id": 4,
@@ -85,6 +95,10 @@
         "color": "#C92C6D"
       }
     ],
-    "role": "後端"
+    "role": "後端",
+    "awards": [
+      "🏅 資訊應用創新競賽 教育開放資料組-第二名",
+      "🎉 資料創新應用競賽 入圍社會經濟空間組"
+    ]
   }
 ]
