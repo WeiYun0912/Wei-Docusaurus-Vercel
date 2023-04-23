@@ -19,6 +19,12 @@ sidebar_position: 1
 
 ## 安裝相關套件
 
+建立 React + TypeScript 的環境：
+
+```
+npm create vite@latest 你的專案名稱 -- --template react-ts
+```
+
 要安裝的套件有點多，所以可以直接複製以下的指令來進行安裝：
 
 ```
