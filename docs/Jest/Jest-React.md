@@ -31,7 +31,7 @@ npm create vite@latest 你的專案名稱 -- --template react-ts
 npm i -D jest @types/jest ts-node ts-jest @testing-library/react @testing-library/user-event identity-obj-proxy @testing-library/jest-dom @types/testing-library__jest-dom jest-environment-jsdom
 ```
 
-:::
+:::note
 記得在安裝的時候要加上 `-D`，才不會把測試用到的套件安裝到正式環境中。
 :::
 
