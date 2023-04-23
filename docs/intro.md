@@ -23,10 +23,13 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 - <Link to="/docs/category/mongodb">MongoDB</Link>
 - <Link to="/docs/category/css--javascript">CSS & JavaScript</Link>
 - <Link to="/docs/category/storybook">Storybook</Link>
+- <Link to="/docs/category/tailwind-css">Tailwind CSS</Link>
+- <Link to="/docs/category/typescript">TypeScript</Link>
 - <Link to="/docs/category/vs-code">VS Code</Link>
 - <Link to="/docs/category/css">CSS</Link>
 - <Link to="/docs/category/vite">Vite</Link>
 - <Link to="/docs/category/docusaurus">Docusaurus</Link>
+- <Link to="/docs/category/jest-react">Jest (React)</Link>
 - <Link to="/docs/category/others">Others</Link>
 
 持續更新中...
@@ -37,6 +40,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+- 2023-04-23：新增 <Link to="/docs/Jest/Jest-React">Jest React (TypeScript) 環境設定</Link> 文章。
 - 2023-03-21：新增 <Link to="/docs/TypeScript/TypeScript-Zod">TypeScript Zod</Link> 文章。
 - 2023-03-20：新增 <Link to="/docs/Tailwind/Tailwind-Setup">Tailwind CSS 環境建置與相關語法</Link> 文章。
 - 2023-03-20：新增 <Link to="/docs/Vite/React-Ts-Tailwind">使用 Vite 快速建立 React + TypeScript + Tailwind CSS 專案</Link> 文章。
