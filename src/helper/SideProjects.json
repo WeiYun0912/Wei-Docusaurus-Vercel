@@ -207,6 +207,26 @@
   },
   {
     "id": 12,
+    "projectTitle": "樂高零件搜尋網",
+    "projectDescribe": "因為有在接觸 Lego Moc，所以常常需要在蝦皮上面購買樂高零件，但零件可能有些店家有，有些沒有，如果用手動的慢慢找會很耗費時間，所以寫了一個網站來讓自己搜尋，前端是使用 React，後端架 Express 並搭配 Puppeteer 將資料爬取下來開 API 給前端。",
+    "projectImage": "img/projects/LegoMOC.png",
+    "tech": [
+      {
+        "name": "React",
+        "color": "#0081B4"
+      },
+      {
+        "name": "Express",
+        "color": "#41644A"
+      },
+      {
+        "name": "Puppeteer",
+        "color": "#7FB77E"
+      }
+    ]
+  },
+  {
+    "id": 13,
     "projectTitle": "怪獸電力公司 刻板練習",
     "projectDescribe": "在閒暇之餘喜歡挑戰自己對於 CSS 的熟悉程度，所以都會找喜歡的卡通或電影來製作一個簡單的 Landing Page。",
     "projectImage": "img/projects/MonsterInc.png",
@@ -227,7 +247,7 @@
     "githubUrl": "https://github.com/WeiYun0912/Monster-Inc"
   },
   {
-    "id": 13,
+    "id": 14,
     "projectTitle": "辛普森家庭 刻板練習",
     "projectDescribe": "在閒暇之餘喜歡挑戰自己對於 CSS 的熟悉程度，所以都會找喜歡的卡通或電影來製作一個簡單的 Landing Page。",
     "projectImage": "img/projects/Simpsons.png",
