@@ -40,6 +40,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+- 2023-05-30：新增 <Link to="/docs/React/Package/React-i18next">React i18next (多國語系切換套件)</Link> 文章。
 - 2023-04-23：新增 <Link to="/docs/Jest/Jest-React">Jest React (TypeScript) 環境設定</Link> 文章。
 - 2023-03-21：新增 <Link to="/docs/TypeScript/TypeScript-Zod">TypeScript Zod</Link> 文章。
 - 2023-03-20：新增 <Link to="/docs/Tailwind/Tailwind-Setup">Tailwind CSS 環境建置與相關語法</Link> 文章。
