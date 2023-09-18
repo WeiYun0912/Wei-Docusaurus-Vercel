@@ -6,8 +6,8 @@ const Skill = ({ Skills }) => {
     <>
       <h1 className={styles.title}>關於我</h1>
       <div className={styles.skillContainer}>
-        {Skills?.map((skill) => (
-          <SkillCard key={skill.id} {...skill} />
+        {Skills?.map((skill, i) => (
+          <SkillCard key={i} {...skill} />
         ))}
       </div>
     </>
@@ -26,7 +26,7 @@ const SkillCard = ({ name, img, tags }) => {
           }}
           className={styles.tiltContentContainer}
         >
-          <img src={img} className={styles.tiltImage} />
+          <img src={img} alt={name} className={styles.tiltImage} />
           <h3 className={styles.tiltTitle}>{name}</h3>
         </div>
         <div className={styles.tiltTags}>

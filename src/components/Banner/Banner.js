@@ -15,22 +15,22 @@ const Banner = () => {
         </Link>
         <div className={styles.bannerSocialMedia}>
           <Link to="https://github.com/WeiYun0912" style={{ width: "200px" }}>
-            <img src="img/github.png" width={80} />
+            <img src="img/github.png" alt="github" width={80} />
           </Link>
           <Link
             to="https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw"
             style={{ width: "200px" }}
           >
-            <img src="img/youtube.svg" width={80} />
+            <img src="img/youtube.svg" alt="youtube" width={80} />
           </Link>
           <Link
             to="https://www.instagram.com/weiwei225/"
             style={{ width: "200px" }}
           >
-            <img src="img/instagram.svg" width={80} />
+            <img src="img/instagram.svg" alt="instagram" width={80} />
           </Link>
           <Link to="https://medium.com/@weiyun0912" style={{ width: "200px" }}>
-            <img src="img/mediumpost.png" width={80} />
+            <img src="img/mediumpost.png" alt="medium-post" width={80} />
           </Link>
         </div>
       </div>

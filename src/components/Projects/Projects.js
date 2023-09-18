@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./styles.module.css";
 import { useColorMode } from "@docusaurus/theme-common";
 import Tilt from "react-tilt";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 const Projects = ({ ProjectsData, title }) => {
   const { colorMode } = useColorMode();
   return (
@@ -42,10 +44,11 @@ const ProjectCard = ({
       className={styles.tilt}
     >
       <div className={styles.tiltImageContainer}>
-        <img
+        <LazyLoadImage
           src={projectImage}
           alt={projectTitle}
           className={styles.tiltImage}
+          effect="blur"
         />
       </div>
 
