@@ -6,6 +6,8 @@ import Banner from "../components/Banner/Banner";
 import Projects from "../components/Projects/Projects";
 import Project from "../helper/Projects.json";
 import Skills from "../helper/Skills.json";
+import Tech from "../helper/Tech.json";
+
 import Skill from "../components/Skill/Skill";
 
 import SideProject from "../helper/SideProjects.json";
@@ -13,6 +15,8 @@ import Experiences from "../helper/Experiences.json";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import "./index.css";
 import Experience from "../components/Experience/Experience";
+import StarsCanvas from "../components/canvas/Star";
+import BallCanvas from "../components/canvas/Ball";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -24,26 +28,54 @@ export default function Home() {
     >
       <Banner />
       <main>
-        <Skill Skills={Skills} />
-        <h1
-          style={{
-            fontSize: "clamp(2rem, 3vw + 1rem, 3rem)",
-            textAlign: "center",
-            marginBottom: "4rem",
-            marginTop: "4rem",
-          }}
-        >
-          求學經歷
-        </h1>
+        <div style={{ position: "relative", zIndex: 0 }}>
+          <Skill Skills={Skills} />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: "2.5em",
+              marginTop: 40,
+            }}
+          >
+            {Tech.map((tech) => (
+              <div key={tech.name} style={{ width: "100px", height: "100px" }}>
+                <BallCanvas icon={tech.icon} />
+              </div>
+            ))}
+          </div>
+          <h1
+            style={{
+              fontSize: "clamp(2rem, 3vw + 1rem, 3rem)",
+              textAlign: "center",
+              marginBottom: "4rem",
+              marginTop: "4rem",
+            }}
+          >
+            求學經歷
+          </h1>
+          <BrowserOnly fallback={<Loading />}>
+            {() => {
+              return (
+                <>
+                  <Experience Experiences={Experiences} />
+                </>
+              );
+            }}
+          </BrowserOnly>
 
-        <BrowserOnly fallback={<Loading />}>
-          {() => {
-            return <Experience Experiences={Experiences} />;
-          }}
-        </BrowserOnly>
-
-        <Projects ProjectsData={Project} title="曾經參與過的專案 (比賽專題)" />
-        <Projects ProjectsData={SideProject} title="個人作品 (Side Projects)" />
+          <Projects
+            ProjectsData={Project}
+            title="曾經參與過的專案 (比賽專題)"
+          />
+          <Projects
+            ProjectsData={SideProject}
+            title="個人作品 (Side Projects)"
+          />
+          <StarsCanvas />
+        </div>
       </main>
     </Layout>
   );

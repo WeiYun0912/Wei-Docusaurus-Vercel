@@ -1,0 +1,41 @@
+[
+  {
+    "name": "HTML",
+    "icon": "img/tech/html.png"
+  },
+
+  {
+    "name": "CSS",
+    "icon": "img/tech/css.png"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "img/tech/javascript.png"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "img/tech/typescript.png"
+  },
+  {
+    "name": "React",
+    "icon": "img/tech/reactjs.png"
+  },
+  {
+    "name": "NodeJS",
+    "icon": "img/tech/nodejs.png"
+  },
+
+  {
+    "name": "MongoDB",
+    "icon": "img/tech/mongodb.png"
+  },
+  {
+    "name": "Tailwind",
+    "icon": "img/tech/tailwind.png"
+  },
+
+  {
+    "name": "Git",
+    "icon": "img/tech/git.png"
+  }
+]
