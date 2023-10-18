@@ -21,7 +21,7 @@
     "id": 2,
     "projectTitle": "Youtube 頻道經營",
     "projectDescribe": "日常會分享一些程式語言或工具的使用方式，透過這樣的方式來記錄自己曾經做了哪些事情，以後如果忘記程式或工具的使用方式也可以透過影片幫助自己回想起來，同時也抱持著有一天這部影片搞不好能夠幫助到人的想法。",
-    "projectImage": "img/projects/Youtube.png",
+    "projectImage": "img/projects/Youtube2.png",
     "channelUrl": "https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw"
   },
   {
@@ -248,6 +248,27 @@
   },
   {
     "id": 14,
+    "projectTitle": "Ben10 刻板練習",
+    "projectDescribe": "在閒暇之餘喜歡挑戰自己對於 CSS 的熟悉程度，所以都會找喜歡的卡通或電影來製作一個簡單的 Landing Page。",
+    "projectImage": "img/projects/Ben10.png",
+    "tech": [
+      {
+        "name": "HTML",
+        "color": "#FF1E00"
+      },
+      {
+        "name": "CSS",
+        "color": "#0096FF"
+      },
+      {
+        "name": "JavaScript",
+        "color": "#E6B325"
+      }
+    ],
+    "githubUrl": "https://github.com/WeiYun0912/Ben-10"
+  },
+  {
+    "id": 15,
     "projectTitle": "辛普森家庭 刻板練習",
     "projectDescribe": "在閒暇之餘喜歡挑戰自己對於 CSS 的熟悉程度，所以都會找喜歡的卡通或電影來製作一個簡單的 Landing Page。",
     "projectImage": "img/projects/Simpsons.png",
