@@ -1,10 +1,10 @@
 ---
 title: "[javascript] JavaScript 常用的字串方法"
-keywords: [javascript,string,replace,replace regex]
-description: [javascript] JavaScript 常用的字串方法
+keywords: [javascript, string, replace]
+description: JavaScript 常用的字串方法
 author: WeiYun0912
-og:title: [javascript] JavaScript 常用的字串方法
-og:description: [javascript] JavaScript 常用的字串方法
+og:title: JavaScript 常用的字串方法
+og:description: JavaScript 常用的字串方法
 ---
 
 ## 說明
