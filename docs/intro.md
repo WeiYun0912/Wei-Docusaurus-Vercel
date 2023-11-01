@@ -40,6 +40,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+- 2023-11-01：新增 <Link to="/docs/VS%20Code/vsCodeExtensions2">5 個實用的 VS Code 擴充套件 (extensions)</Link> 文章。
 - 2023-10-28：新增 <Link to="/docs/JavaScript/string">JavaScript 常用的字串方法</Link> 文章。
 - 2023-10-24：新增 <Link to="/docs/React/Tips/React-State-URL">React State 放在 URL 的好處</Link> 文章。
 - 2023-05-30：新增 <Link to="/docs/React/Package/React-i18next">React i18next (多國語系切換套件)</Link> 文章。
