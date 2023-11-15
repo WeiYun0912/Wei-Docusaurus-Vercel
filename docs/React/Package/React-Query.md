@@ -9,6 +9,10 @@ og:description: React 在 data fetch 上是較不方便的，不依靠第三方�
 
 [Github 連結](https://github.com/WeiYun0912/React-Query-Note)
 
+[影片介紹](https://www.youtube.com/watch?v=2ITjyeNFFuo&ab_channel=WeiWei) **強烈建議觀看影片教學，這篇筆記做的不完全。**
+
+[影片介紹(useMutation,invalidateQueries)](https://www.youtube.com/watch?v=TCdR6KifeKs&ab_channel=WeiWei) **強烈建議觀看影片教學，這篇筆記做的不完全。**
+
 api 網址：https://swapi.dev/api/planets/
 
 ```javascript
