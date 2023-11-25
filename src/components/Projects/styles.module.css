@@ -104,11 +104,18 @@
   text-align: justify;
 }
 
+.tiltContainer {
+  /* display: none; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .tilt {
   background-color: #fffbf5;
   padding: 1.25rem;
   border-radius: 1rem;
   width: 100%;
+  /* height: fit-content; */
 }
 
 .tiltImageContainer {
