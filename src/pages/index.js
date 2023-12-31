@@ -15,7 +15,7 @@ import Experiences from "../helper/Experiences.json";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import "./index.css";
 import Experience from "../components/Experience/Experience";
-import StarsCanvas from "../components/canvas/Star";
+
 import BallCanvas from "../components/canvas/Ball";
 
 export default function Home() {
@@ -74,7 +74,6 @@ export default function Home() {
             ProjectsData={SideProject}
             title="個人作品 (Side Projects)"
           />
-          <StarsCanvas />
         </div>
       </main>
     </Layout>
