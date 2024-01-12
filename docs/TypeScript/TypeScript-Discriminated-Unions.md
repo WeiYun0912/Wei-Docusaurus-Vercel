@@ -8,6 +8,8 @@ og:description: "React Component Discriminated Unions (可辨識複合型別)"
 sidebar_position: 1
 ---
 
+[影片介紹](https://www.youtube.com/watch?v=B-aNpOuRjHU&ab_channel=WeiWei)
+
 ## 介紹
 
 今天要介紹如何使用 typescript 的 discriminated unions 來建立更彈性化的 component。

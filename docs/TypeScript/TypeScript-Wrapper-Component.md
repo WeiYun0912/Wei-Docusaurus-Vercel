@@ -1,12 +1,14 @@
 ---
-title: "[typescript] React Batter Wrapper Component (ComponentPropsWithoutRef)"
+title: "[typescript] React Batter Wrapper Component (ComponentProps,ComponentPropsWithoutRef)"
 keywords: [javascript, typescript]
 description: "介紹一下怎麼建立更彈性化的 Wrapper Component"
 author: WeiYun0912
-og:title: "[typescript] React Batter Wrapper Component (ComponentPropsWithoutRef)"
-og:description: "React Batter Wrapper Component (ComponentPropsWithoutRef)"
+og:title: "[typescript] React Batter Wrapper Component (ComponentProps,ComponentPropsWithoutRef)"
+og:description: "React Batter Wrapper Component (ComponentProps,ComponentPropsWithoutRef)"
 sidebar_position: 1
 ---
+
+[影片介紹](https://youtu.be/e0tU0iXoEzg)
 
 ## 介紹
 
@@ -93,6 +95,16 @@ export default Input;
 
 ![Image](https://i.imgur.com/BcOwATE.png)
 
+## 補充
+
+其實不只有 `ComponentPropsWithoutRef` 可以使用，還有 `ComponentProps` 和 `ComponentPropsWithRef`，用法也和字面上的意思一樣，如果 component 有傳入 ref 的話，就使用 `ComponentPropsWithRef`，差別就是讓維護的人看到就知道該 component 是需要接收 ref 的，而如果單純使用 `ComponentProps` 的話也可以，只是就沒辦法明確的知道 component 需不需要傳入 ref。
+
+`ComponentPropsWithoutRef` 和 `ComponentPropsWithRef` 的缺點就是命名過長。
+
 ## 參考資料
+
+[React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/advanced/patterns_by_usecase/#componentprops)
+
+[ComponentProps: React's Most Useful Type Helper](https://www.totaltypescript.com/react-component-props-type-helper)
 
 udemy 課程 React & TypeScript - The Practical Guide Academind by Maximilian Schwarzmüller, Maximilian Schwarzmüller
