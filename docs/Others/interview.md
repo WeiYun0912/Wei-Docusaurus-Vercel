@@ -244,18 +244,21 @@ AJAX（Asynchronous JavaScript and XML）是一種在無需重新載入整個頁
 
 ### 在 React 和 Vue 中，key 做了什麼，有什麼好處，如果不寫會怎樣？
 
-在 React 和 Vue 中，key 是用來追踪列表中每個元素的唯一性的。使用 key 可以提高渲染效率：
+在 React 和 Vue 中，key 是用來追蹤每個元素的唯一性的。使用 key 可以提高渲染效率：
 
 - 好處：
-  - 提高重新渲染的效率，當數據變化時，框架可以通過 key 快速確定哪些元素被新增或刪除，從而只更新變化的部分，而不是重新渲染整個列表。
+  - 提高重新渲染的效率，當數據變化時，可以通過 key 快速確定哪些元素被新增或刪除，從而只更新變化的部分，而不是重新渲染整個 list。
   - 幫助避免一些與狀態管理相關的錯誤，特別是在使用可變數據或復雜元件結構時。
+  - 如果用在單一元件上，當 key 改變時，可以重置元件的狀態。
 - 如果不寫：
-  - 如果不提供 key 或者 key 不唯一，可能會導致渲染錯誤，性能下降，或者在使用元件狀態時出現難以追蹤的錯誤。
+  - 如果不提供 key 或者 key 不唯一，可能會導致渲染錯誤，效能下降，或者在使用元件狀態時出現難以追蹤的錯誤。
 
 ### package 的 lock file 做什麼用？
 
 <TextAlignJustify>
 package-lock.json（npm）或 yarn.lock（Yarn）記錄了安裝的每個依賴的確切版本，以確保項目在不同環境中安裝相同版本的依賴，從而避免了因依賴版本差異帶來的問題。
+
+當下 npm ci 時，是照 package-lock.json 下載依賴的，確保 CI 時的依賴不會跑掉，不同於 npm install 是照 package.json 下載依賴，有可能導致依賴不同的 runtime error。
 </TextAlignJustify>
 
 ### CommonJS 和 ESModule 有什麼差別？
