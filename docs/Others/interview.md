@@ -121,7 +121,7 @@ Cookie 用於存儲小量資料，隨 HTTP 請求發送，有大小和時間限�
 事件委派（Event Delegation）是一種 JavaScript 事件處理方法，它利用了事件冒泡的原理，將事件監聽器新增到一個父元素上，而不是將事件監聽器新增到多個子元素上。這樣當子元素上的事件被觸發並冒泡到父元素時，可以在父元素上處理這些事件。事件委派的好處包括減少記憶體使用、避免為每個子元素新增事件監聽器，以及動態元素的事件處理。
 </TextAlignJustify>
 
-### 請解釋 JavaScript 的原型繼承是如何工作的。
+### 請解釋 JavaScript 的原型繼承是如何運作的。
 
 <TextAlignJustify>
 JavaScript 的繼承（Inherit）是基於原型（Prototype）的。每個 JavaScript 物件都有一個指向另一個物件的原型屬性，這個指向的物件就是其原型。當試圖訪問一個物件的屬性或方法時，如果該物件本身沒有這個屬性或方法，JavaScript 會繼續在這個物件的原型鏈上尋找，直到找到或達到原型鏈的末端。
@@ -142,19 +142,19 @@ fetch("https://api.example.com/data")
   .catch((error) => console.error("Error:", error));
 ```
 
-### 請解釋什麼是事件循環，以及它是如何工作的？
+### 請解釋什麼是事件循環，以及它是如何運作的？
 
 [參考影片](https://www.youtube.com/watch?v=smSZ4spzcrw&ab_channel=WeiWei)
 
 <TextAlignJustify>
-事件循環（Event Loop）是 JavaScript 的一個工作機制，用於在單執行緒（Single Thread）環境中處理非同步事件。JavaScript 引擎使用事件循環來協調事件、用戶互動、腳本、渲染、網絡請求等的執行。事件循環的核心是一個不斷檢查消息佇列（Message Queue）是否有待處理消息的過程，如果有，就取出一個消息並執行相應的回調，直到消息佇列清空。
+事件循環（Event Loop）是 JavaScript 的一個運作機制，用於在單執行緒（Single Thread）環境中處理非同步事件。JavaScript 引擎使用事件循環來協調事件、用戶互動、腳本、渲染、網絡請求等的執行。事件循環的核心是一個不斷檢查消息佇列（Message Queue）是否有待處理消息的過程，如果有，就取出一個消息並執行相應的回調，直到消息佇列清空。
 </TextAlignJustify>
 
 ![Image](https://i.imgur.com/waUZ0sl.png)
 
 <CenterImage src="https://i.imgur.com/DxOmAWu.png"/>
 
-### 請解釋 JavaScript 中的 this 關鍵字如何工作。
+### 請解釋 JavaScript 中的 this 關鍵字如何運作。
 
 <TextAlignJustify>
 在JavaScript中，this關鍵字指的是函式當前的執行上下文。它的值取決於函式是如何被呼叫的，而不是如何被定義的。在全域範圍內，this指向全域物件；在方法內部，this指向呼叫該方法的物件；在事件處理函式中，this通常指向觸發事件的元素；在箭頭函式中，this被設定為它被創建時的上下文。
