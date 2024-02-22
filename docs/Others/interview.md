@@ -312,6 +312,44 @@ React 18 中的渲染流程在更新觸發、協調和渲染三個步驟之間�
 
 [參考影片](https://youtu.be/sQio-tk6wCI?si=Ehf64yrb9ex0tv3k)
 
+### 什麼是純函式 (pure function)? 為什麼 React 的函式元件需要是純函式?
+
+<TextAlignJustify>
+pure function 是指帶有以下兩個主要特點的函式，第一是「只要有相同的輸入，就會有相同的輸出」；第二則是它不會改變函式以外的存在，換句話說不會有副作用 (side effects)。
+</TextAlignJustify>
+
+<TextAlignJustify>
+React 的函式元件之所以需要是 pure function，是因為當函式如果不純 (impure)，會讓渲染出的畫面不穩定，可能出現我們預期外的 UI 呈現。白話來說，就是比較容易造成 bugs，如果每次的輸入，會有不同的輸出，那會讓 UI 的呈現非常不穩定。
+</TextAlignJustify>
+
+<TextAlignJustify>
+要在 React 避免這類錯誤，可以使用嚴格模式 (Strict Mode)。當我們開啟嚴格模式後，React 在渲染每個元件時，都渲染兩次；只要是不純的函式，就很可能在兩次渲染出現不同結果，這可以讓我們更偵測出是哪裡出問題。
+</TextAlignJustify>
+
+### 什麼是 JSX? 為什麼要用 JSX?
+
+[參考影片](https://www.youtube.com/watch?v=uH-UP7sksSQ&t=1s&ab_channel=WeiWei)
+
+<TextAlignJustify>
+JSX 在語法上看起來與 HTML 相近，但它其實是 JavaScript 的語法擴展。它的特點是，UI 與 JavaScript 邏輯的相融 - 組合成元件。
+</TextAlignJustify>
+
+<TextAlignJustify>
+JSX 本質上做的事情是：生成 React 元素(elements)，它其實是 React.createElement(component, props, ...children) 函式的語法糖。可以看到下面的例子
+</TextAlignJustify>
+
+```jsx showLineNumbers
+<MyButton color="blue" shadowSize={2}>
+  Click Me
+</MyButton>
+```
+
+等同於
+
+```jsx showLineNumbers
+React.createElement(MyButton, { color: "blue", shadowSize: 2 }, "Click Me");
+```
+
 ## 其他
 
 ### 解釋單頁式應用（SPA）和多頁式應用（MPA）的區別。
@@ -404,3 +442,5 @@ package-lock.json（npm）或 yarn.lock（Yarn）記錄了安裝的每個依賴�
 [Javascript Interview Questions with Answers](https://medium.com/front-end-weekly/javascript-interview-questions-with-answers-6194455b091a)
 
 [為什麼更新 React 中的 state 要用 immutable 的寫法? 什麼是 immutable? 該如何寫才會是 immutable?](https://www.explainthis.io/zh-hant/swe/react-why-immutable)
+
+[React 面試題詳解 - 導覽](https://www.explainthis.io/zh-hant/swe/react)
