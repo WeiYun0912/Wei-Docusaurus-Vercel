@@ -19,20 +19,13 @@ import CenterImage from "@site/src/components/mdHelper/CenterImage";
 
 統整常出現的前端面試題目，尚未分類，持續更新中…
 
-### 解釋 DOM
-
-<TextAlignJustify>
-DOM（文件物件模型 Document Object Model）是一個跨平台和語言獨立的介面，讓程式能夠讀取和更新文件的內容、結構以及樣式。DOM 將 HTML、XML 或 SVG 文件表示為節點和物件的樹狀結構，讓開發者可以用 JavaScript 操作這些節點，進行新增、移除或修改頁面的元素和內容。
-</TextAlignJustify>
+## CSS
 
 ### CSS Box Model 包含哪些元素
 
 <TextAlignJustify>
 CSS 箱子模型由四個部分組成：內容（Content）、內邊距（Padding）、邊框（Border）和外邊距（Margin）。內容區域存放實際的內容，內邊距圍繞著內容區域，邊框圍繞著內邊距，最外層的外邊距則是盒子和其他元素之間的空白區域。
-
 </TextAlignJustify>
-
-![Image](https://i.imgur.com/k0JVwK2.png)
 
 ### 請解釋 CSS 預處理器及其優點
 
@@ -41,6 +34,16 @@ CSS 預處理器，如 Sass / SCSS、LESS 或 Stylus，是一種腳本語言，�
 </TextAlignJustify>
 
 <CenterImage src="https://i.imgur.com/cnBx2Fu.png"/>
+
+## JavaScript
+
+### 解釋 DOM
+
+<TextAlignJustify>
+DOM（文件物件模型 Document Object Model）是一個跨平台和語言獨立的介面，讓程式能夠讀取和更新文件的內容、結構以及樣式。DOM 將 HTML、XML 或 SVG 文件表示為節點和物件的樹狀結構，讓開發者可以用 JavaScript 操作這些節點，進行新增、移除或修改頁面的元素和內容。
+</TextAlignJustify>
+
+![Image](https://i.imgur.com/k0JVwK2.png)
 
 ### 請解釋 const、let 和 var 的作用域差異。
 
@@ -141,6 +144,8 @@ fetch("https://api.example.com/data")
 
 ### 請解釋什麼是事件循環，以及它是如何工作的？
 
+[參考影片](https://www.youtube.com/watch?v=smSZ4spzcrw&ab_channel=WeiWei)
+
 <TextAlignJustify>
 事件循環（Event Loop）是 JavaScript 的一個工作機制，用於在單執行緒（Single Thread）環境中處理非同步事件。JavaScript 引擎使用事件循環來協調事件、用戶互動、腳本、渲染、網絡請求等的執行。事件循環的核心是一個不斷檢查消息佇列（Message Queue）是否有待處理消息的過程，如果有，就取出一個消息並執行相應的回調，直到消息佇列清空。
 </TextAlignJustify>
@@ -162,6 +167,152 @@ fetch("https://api.example.com/data")
 </TextAlignJustify>
 
 ![Image](https://i.imgur.com/bBTIpOE.png)
+
+### 請解釋什麼是 AJAX，以及它如何運作？
+
+<TextAlignJustify>
+AJAX（Asynchronous JavaScript and XML）是一種在無需重新載入整個頁面的情況下，能夠與伺服器交換資料並更新部分網頁的技術。它通過 JavaScript 發送非同步請求（XMLHttpRequest 簡稱 XHR，或 Fetch）到伺服器，伺服器回應請求後，JavaScript 再根據回應更新頁面的特定部分。這使得應用能夠更快回應用戶操作。
+</TextAlignJustify>
+
+### CommonJS 和 ESModule 有什麼差別？
+
+- CommonJS：
+  - 用於 Node.js，採用 require 來載入模組，module.exports 或 exports 來輸出模組。
+  - 模組是同步載入的。
+  - 執行時載入，意味著導入的值是一個物件的 copy，不會隨著導出方的變化而變化。
+- ESModule：
+  - ECMAScript 標準的模組系統，採用 import 和 export 語句。
+  - 支援非同步。
+  - 靜態載入，意味著載入的是一個“活”連接，如果輸出值變化，載入值也會跟著變。
+
+### XHR 和 Fetch 有什麼差別？
+
+- XHR（XMLHttpRequest）：
+  - 較舊的 API，需要較多的程式碼來處理請求和響應。
+  - 支持同步和非同步請求。
+  - 不支援 Promises，錯誤處理較為複雜。
+- Fetch API：
+  - 現代的替代 XHR 的 API，使用 Promises，使得非同步處理更加簡潔。
+  - 不支援取消請求（直到 Fetch API 的 AbortController 出現）和進度監控。
+  - 更簡潔的 API，易於使用和學習。
+
+### JavaScript 的 new 做了什麼？
+
+使用 new 運算符創建一個實例對象時，會進行以下步驟：
+
+1. 創建一個空物件。
+2. 將這個空物件的原型（proto）指向其構造函數的 prototype 物件。
+3. 將這個新物件作為 this 上下文調用構造函數，以初始化新物件。
+4. 如果構造函數返回一個物件，則返回這個物件；否則，返回創建的新物件。
+
+## 資安
+
+### 解釋什麼是跨域資源共享（CORS），以及它為何重要？
+
+<TextAlignJustify>
+跨域資源共享（CORS）是一種機制，它允許限制資源（如字型、JavaScript 等）在網頁應用中被請求自不同的域，這是出於安全原因。CORS 通過伺服器設置特定的 HTTP 回應頭（Response Header）來實現，這些頭資訊告訴瀏覽器允許來自特定來源的請求訪問該資源。CORS 對於建立一個安全的網際網路生態系統至關重要。
+</TextAlignJustify>
+
+### 解釋什麼是跨網站腳本攻擊（XSS），以及如何防範它？
+
+<TextAlignJustify>
+跨網站腳本攻擊（XSS）是一種安全漏洞，攻擊者通過在網頁中注入惡意腳本，當其他用戶瀏覽這些網頁時，執行這些腳本，從而獲取用戶資料或其他敏感資訊。防範XSS的方法包括對用戶輸入進行驗證和轉義、使用CSP（內容安全政策）來限制資源的來源，以及使用 HTTPOnly 標誌來保護 cookie 等。
+</TextAlignJustify>
+
+## React
+
+### setState 是同步還是非同步?
+
+非同步，詳細可以看[這支影片](https://www.youtube.com/watch?v=heMEYoFUYD0&ab_channel=WeiWei)。
+
+### 什麼是 batch update?
+
+<TextAlignJustify>
+在 React 中，批次更新（batch update）是一種優化機制，用於將多個狀態更新合併為單一更新操作，從而減少不必要的重新渲染次數並提高效能。
+</TextAlignJustify>
+
+<TextAlignJustify>
+當你在 React 元件中連續多次呼叫 setState 方法時，React 會將這些狀態更新操作收集到一個佇列中，並在適當的時機（通常是在目前程式碼區塊執行完畢後）一次處理這些更新。 這樣做可以避免在每次狀態更新時觸發元件的重新渲染，而是在適當的時機一次更新元件的狀態並重新渲染元件。
+</TextAlignJustify>
+
+<TextAlignJustify>
+batch 機制也同時避免了在同一次事件中大量呼叫 setState 所造成的資源浪費。
+</TextAlignJustify>
+
+### 什麼是 Suspense?
+
+<TextAlignJustify>
+Suspense 是一個用於在元件渲染過程中處理非同步操作的特殊元件。它允許你在等待某些非同步操作完成時顯示一個 loading 狀態，或在非同步操作完成後展示非同步載入的內容。
+</TextAlignJustify>
+
+### React 18 的渲染流程
+
+React 18 中的渲染流程主要由三個步驟組成：
+
+1. 觸發更新: 更新可以透過多種方式觸發，包括元件的狀態或屬性的改變，以及父元件的重新渲染等。 與先前的版本不同，React 18 中引入了一種新的觸發更新的機制，稱為 Scheduler。 Scheduler 負責根據一定的優先順序和排程策略來決定何時執行更新。
+
+2. Reconciliation（協調）: 一旦更新被觸發，React 將執行協調過程，比較新的 Virtual DOM 和舊的 Virtual DOM，找出需要更新的部分。 這個過程包括 Diff 演算法的執行，確定需要進行的 DOM 更新操作。
+
+3. Render（渲染）: 一旦協調完成，React 將使用更新的 Virtual DOM 來進行實際的渲染操作，更新頁面上的 DOM 結構。 在這一步驟中，React 會盡可能地批次更新，以提高效能和效率。
+
+React 18 中的渲染流程在更新觸發、協調和渲染三個步驟之間進行，並透過 Scheduler 來管理更新的調度和優先級，以提供更好的效能和使用者體驗。
+
+### Vue 跟 React 的 V-DOM 差異
+
+1. 實現方式:
+
+- Vue：Vue 使用了與 React 不同的虛擬 DOM 實現，它稱為「VNode」。
+- React：React 使用了一個經典的虛擬 DOM 實現，將整個 UI 表示為一棵樹形結構。
+
+2. 模板語法和 JSX:
+
+- Vue：Vue 提供了一種模板語法，允許開發者在模板中直接編寫 HTML 和指令，透過將模板編譯成渲染函數來建立 VNode。
+- React：React 主要使用 JSX，它是一種 JavaScript 的擴充語法，允許開發者在 JavaScript 中直接編寫類似 XML 的語法，透過 React.createElement() 或 JSX 編譯器來建立虛擬 DOM。
+
+3. 響應式系統:
+
+- Vue：Vue 的響應式系統是在建立元件實例時自動設定的，可以透過修改元件的資料來觸發重新渲染。
+- React：React 的響應式系統需要明確地呼叫 setState() 或使用 Hooks 來更新元件狀態，從而觸發重新渲染。
+
+4. 效能優化:
+
+- Vue：Vue 在內部進行了一些效能最佳化，例如透過範本編譯和靜態分析來減少虛擬 DOM 的生成和比較次數。
+- React：React 使用了一種稱為「協調（Reconciliation）」的演算法來比較虛擬 DOM，以確定需要更新的部分。 同時，React 18 引入了 Concurrent Mode 和新的調度器，以進一步提高效能。
+
+### 什麼是 immutable state。
+
+<TextAlignJustify>
+在 React 中，immutable state（不可變狀態）是指狀態（state）物件一旦建立後就無法直接修改或變更的概念。 相反，任何對狀態的更新都應該產生一個新的狀態物件，而不是在原始狀態物件上進行修改。
+</TextAlignJustify>
+
+<TextAlignJustify>
+使用 immutable state 有助於提高程式碼的可維護性和可預測性，因為它可以避免一些常見的錯誤，例如狀態更改造成的副作用。此外，immutable state 還有助於優化效能，因為它允許 React 在進行狀態比較時更容易確定是否需要重新渲染元件。
+</TextAlignJustify>
+
+<TextAlignJustify>
+在 React 中，可以透過使用 setState 方法來更新元件的狀態，這個方法會接收一個新的狀態物件作為參數，並在更新完成後觸發元件的重新渲染。 由於 setState 方法會建立一個新的狀態物件，而不是在原始狀態對像上進行修改，因此它符合 immutable state 的原則。
+</TextAlignJustify>
+
+<TextAlignJustify>
+之所以在 React 不能直接去改物件，而是要透過 setState ，是因為物件是傳址 (pass by reference)，因此當我們改變了物件本身，該物件在記憶體的位置沒有改變；而當我們改變物件本身，但其位置沒改變時，React 會不知道該物件改變，因此不會用新的值來重新渲染畫面，這將導致畫面渲染出的東西，不是我們預期的結果。
+</TextAlignJustify>
+
+### 在 React 和 Vue 中，key 做了什麼，有什麼好處，如果不寫會怎樣？
+
+在 React 和 Vue 中，key 是用來追蹤每個元素的唯一性的。使用 key 可以提高渲染效率：
+
+- 好處：
+  - 提高重新渲染的效率，當數據變化時，可以通過 key 快速確定哪些元素被新增或刪除，從而只更新變化的部分，而不是重新渲染整個 list。
+  - 幫助避免一些與狀態管理相關的錯誤，特別是在使用可變數據或復雜元件結構時。
+  - 如果用在單一元件上，當 key 改變時，可以重置元件的狀態。
+- 如果不寫：
+  - 如果不提供 key 或者 key 不唯一，可能會導致渲染錯誤，效能下降，或者在使用元件狀態時出現難以追蹤的錯誤。
+
+### useEffect 的 callback 跟 clear function 的執行時間。
+
+[參考影片](https://youtu.be/sQio-tk6wCI?si=Ehf64yrb9ex0tv3k)
+
+## 其他
 
 ### 解釋單頁式應用（SPA）和多頁式應用（MPA）的區別。
 
@@ -187,101 +338,11 @@ fetch("https://api.example.com/data")
 
 ![Image](https://i.imgur.com/5QU3kBo.png)
 
-### 請解釋什麼是 AJAX，以及它如何工作？
-
-<TextAlignJustify>
-AJAX（Asynchronous JavaScript and XML）是一種在無需重新載入整個頁面的情況下，能夠與伺服器交換資料並更新部分網頁的技術。它通過 JavaScript 發送非同步請求（XMLHttpRequest 簡稱 XHR，或 Fetch）到伺服器，伺服器回應請求後，JavaScript 再根據回應更新頁面的特定部分。這使得應用能夠更快回應用戶操作。
-</TextAlignJustify>
-
-### 解釋什麼是跨域資源共享（CORS），以及它為何重要？
-
-<TextAlignJustify>
-跨域資源共享（CORS）是一種機制，它允許限制資源（如字型、JavaScript 等）在網頁應用中被請求自不同的域，這是出於安全原因。CORS 通過伺服器設置特定的 HTTP 回應頭（Response Header）來實現，這些頭資訊告訴瀏覽器允許來自特定來源的請求訪問該資源。CORS 對於建立一個安全的網際網路生態系統至關重要。
-</TextAlignJustify>
-
-### 解釋什麼是跨網站腳本攻擊（XSS），以及如何防範它？
-
-<TextAlignJustify>
-跨網站腳本攻擊（XSS）是一種安全漏洞，攻擊者通過在網頁中注入惡意腳本，當其他用戶瀏覽這些網頁時，執行這些腳本，從而獲取用戶資料或其他敏感資訊。防範XSS的方法包括對用戶輸入進行驗證和轉義、使用CSP（內容安全政策）來限制資源的來源，以及使用 HTTPOnly 標誌來保護 cookie 等。
-</TextAlignJustify>
-
 ### 請解釋什麼是 Progressive Web Apps（PWA），以及它們的主要特點是什麼？
 
 <TextAlignJustify>
  Progressive Web Apps（PWA）是一種使用現代 Web 技術建立的應用，旨在提供類似於原生應用（Native Apps）的用戶體驗。它們的主要特點包括：可靠性（即使在不穩定的網絡條件下也能立即載入）、快速回應（快速回應用戶的互動）、和可安裝（允許用戶將Web應用新增到主螢幕，無需通過應用商店）。
 </TextAlignJustify>
-
-### 解釋前端性能優化的常見方法有哪些？
-
-前端性能優化的常見方法包括：
-
-- 減少 HTTP 請求：通過合併檔案、使用精靈圖（Sprite Map）等方法。
-- 優化資源：壓縮 CSS、JavaScript 檔案，優化圖片尺寸及檔案格式。
-- 使用 CDN 分發靜態資源。
-- 延遲載入非關鍵資源，如靜態資源（圖片），或將 JavaScript 進行程式碼分割（Code Splitting），再按需載入。
-- 利用瀏覽器快取，通過設置合理的 Cache-Control Header。
-- 使用 Service Workers 進行資源的預載入和快取。
-- 避免不必要的重排（re-flow）和重繪（re-paint），合理使用 CSS 和 DOM。
-- 防抖和節流
-
-### 瀏覽器是如何渲染畫面的？
-
-1. 解析 HTML：瀏覽器將 HTML 文檔解析成 DOM（文件物件模型）樹。
-2. 解析 CSS：解析 CSS 檔案和 `<style>` 標籤中的樣式，生成 CSSOM（CSS 物件模型）樹。
-3. DOM 樹與 CSSOM 樹結合：將 DOM 樹和 CSSOM 樹結合生成渲染樹（Render Tree），渲染樹只包含需要顯示的節點及其樣式資訊。
-4. 佈局（Layout/Reflow）：計算渲染樹中每個節點的位置和大小。
-5. 繪製（Paint）：根據渲染樹以及佈局資訊，將元素繪製到屏幕上。
-6. 合成（Composite）：如果頁面中有多層疊加的元素（如透明度、陰影等），瀏覽器會在繪製後進行合成。
-
-### JavaScript 的 new 做了什麼？
-
-使用 new 運算符創建一個實例對象時，會進行以下步驟：
-
-1. 創建一個空物件。
-2. 將這個空物件的原型（proto）指向其構造函數的 prototype 物件。
-3. 將這個新物件作為 this 上下文調用構造函數，以初始化新物件。
-4. 如果構造函數返回一個物件，則返回這個物件；否則，返回創建的新物件。
-
-### 在 React 和 Vue 中，key 做了什麼，有什麼好處，如果不寫會怎樣？
-
-在 React 和 Vue 中，key 是用來追蹤每個元素的唯一性的。使用 key 可以提高渲染效率：
-
-- 好處：
-  - 提高重新渲染的效率，當數據變化時，可以通過 key 快速確定哪些元素被新增或刪除，從而只更新變化的部分，而不是重新渲染整個 list。
-  - 幫助避免一些與狀態管理相關的錯誤，特別是在使用可變數據或復雜元件結構時。
-  - 如果用在單一元件上，當 key 改變時，可以重置元件的狀態。
-- 如果不寫：
-  - 如果不提供 key 或者 key 不唯一，可能會導致渲染錯誤，效能下降，或者在使用元件狀態時出現難以追蹤的錯誤。
-
-### package 的 lock file 做什麼用？
-
-<TextAlignJustify>
-package-lock.json（npm）或 yarn.lock（Yarn）記錄了安裝的每個依賴的確切版本，以確保項目在不同環境中安裝相同版本的依賴，從而避免了因依賴版本差異帶來的問題。
-
-當下 npm ci 時，是照 package-lock.json 下載依賴的，確保 CI 時的依賴不會跑掉，不同於 npm install 是照 package.json 下載依賴，有可能導致依賴不同的 runtime error。
-</TextAlignJustify>
-
-### CommonJS 和 ESModule 有什麼差別？
-
-- CommonJS：
-  - 用於 Node.js，採用 require 來載入模組，module.exports 或 exports 來輸出模組。
-  - 模組是同步載入的。
-  - 執行時載入，意味著導入的值是一個物件的 copy，不會隨著導出方的變化而變化。
-- ESModule：
-  - ECMAScript 標準的模組系統，採用 import 和 export 語句。
-  - 支援非同步。
-  - 靜態載入，意味著載入的是一個“活”連接，如果輸出值變化，載入值也會跟著變。
-
-### XHR 和 Fetch 有什麼差別？
-
-- XHR（XMLHttpRequest）：
-  - 較舊的 API，需要較多的程式碼來處理請求和響應。
-  - 支持同步和非同步請求。
-  - 不支援 Promises，錯誤處理較為複雜。
-- Fetch API：
-  - 現代的替代 XHR 的 API，使用 Promises，使得非同步處理更加簡潔。
-  - 不支援取消請求（直到 Fetch API 的 AbortController 出現）和進度監控。
-  - 更簡潔的 API，易於使用和學習。
 
 ### 如果整個網頁都不使用一般的 HTTP 請求，而是全部採用 WebSocket，會有什麼缺點？
 
@@ -302,6 +363,44 @@ package-lock.json（npm）或 yarn.lock（Yarn）記錄了安裝的每個依賴�
   - 使用了二進制分幀層來改進性能和安全性。
   - 更有效的頭部壓縮機制（HPACK）減少開銷。
 
+### package 的 lock file 做什麼用？
+
+<TextAlignJustify>
+package-lock.json（npm）或 yarn.lock（Yarn）記錄了安裝的每個依賴的確切版本，以確保項目在不同環境中安裝相同版本的依賴，從而避免了因依賴版本差異帶來的問題。
+
+當下 npm ci 時，是照 package-lock.json 下載依賴的，確保 CI 時的依賴不會跑掉，不同於 npm install 是照 package.json 下載依賴，有可能導致依賴不同的 runtime error。
+</TextAlignJustify>
+
+### 解釋前端性能優化的常見方法有哪些？
+
+前端性能優化的常見方法包括：
+
+- 減少 HTTP 請求：通過合併檔案、使用精靈圖（Sprite Map）等方法。
+- 優化資源：壓縮 CSS、JavaScript 檔案，優化圖片尺寸及檔案格式。
+- 使用 CDN 分發靜態資源。
+- 延遲載入非關鍵資源，如靜態資源（圖片），或將 JavaScript 進行程式碼分割（Code Splitting），再按需載入。
+- 利用瀏覽器快取，通過設置合理的 Cache-Control Header。
+- 使用 Service Workers 進行資源的預載入和快取。
+- 避免不必要的重排（re-flow）和重繪（re-paint），合理使用 CSS 和 DOM。
+- [防抖](https://www.youtube.com/watch?v=vCLobXMROZg&ab_channel=WeiWei) 和 [節流](https://www.youtube.com/watch?v=IU83Qjax1AI&ab_channel=WeiWei)
+
+### 瀏覽器是如何渲染畫面的？
+
+1. 解析 HTML：瀏覽器將 HTML 文檔解析成 DOM（文件物件模型）樹。
+2. 解析 CSS：解析 CSS 檔案和 `<style>` 標籤中的樣式，生成 CSSOM（CSS 物件模型）樹。
+3. DOM 樹與 CSSOM 樹結合：將 DOM 樹和 CSSOM 樹結合生成渲染樹（Render Tree），渲染樹只包含需要顯示的節點及其樣式資訊。
+4. 佈局（Layout/Reflow）：計算渲染樹中每個節點的位置和大小。
+5. 繪製（Paint）：根據渲染樹以及佈局資訊，將元素繪製到屏幕上。
+6. 合成（Composite）：如果頁面中有多層疊加的元素（如透明度、陰影等），瀏覽器會在繪製後進行合成。
+
+### Git 指令如何運作
+
+![Image](https://i.imgur.com/IikjWpT.png)
+
 ## 資料來源
 
 [新手導向前端學習讀書會群組(狐狸大) - 面試考題筆記](https://purple-sapphire-344.notion.site/d18f5b9ec4e64182ba0288ed37de914b)
+
+[Javascript Interview Questions with Answers](https://medium.com/front-end-weekly/javascript-interview-questions-with-answers-6194455b091a)
+
+[為什麼更新 React 中的 state 要用 immutable 的寫法? 什麼是 immutable? 該如何寫才會是 immutable?](https://www.explainthis.io/zh-hant/swe/react-why-immutable)
