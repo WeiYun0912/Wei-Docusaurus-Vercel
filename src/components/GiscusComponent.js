@@ -10,9 +10,8 @@ export default function GiscusComponent() {
       repo="WeiYun0912/Wei-Docusaurus-Vercel"
       repoId="R_kgDOJNKufA"
       category="Announcements"
-      category-id="DIC_kwDOJNKufM4CdhHY"
+      categoryId="DIC_kwDOJNKufM4CdhHY"
       mapping="title" // Important! To map comments to URL
-      term="Welcome to @giscus/react component!"
       strict="0"
       reactionsEnabled="1"
       emitMetadata="1"

@@ -67,6 +67,12 @@ const config = {
         placeholder: "Search...",
         appId: "DHOQKM934H",
       },
+      giscus: {
+        repo: "WeiYun0912/Wei-Docusaurus-Vercel", // edit this
+        repoId: "R_kgDOJNKufA", // edit this
+        category: "Announcements",
+        categoryId: "DIC_kwDOJNKufM4CdhHY", // edit this
+      },
       metadata: [
         { name: "robots", content: "max-image-preview:large" },
         {
