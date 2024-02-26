@@ -10,10 +10,13 @@ author: WeiYun0912
 og:title: 前端面試考題
 
 og:description: 前端面試考題
+
+enableComments: true # for Gisqus
 ---
 
 import TextAlignJustify from "@site/src/components/mdHelper/TextAlignJustify";
 import CenterImage from "@site/src/components/mdHelper/CenterImage";
+import Giscus from "@site/src/components/GiscusComponent"
 
 ## 說明
 
@@ -26,6 +29,8 @@ import CenterImage from "@site/src/components/mdHelper/CenterImage";
 <TextAlignJustify>
 CSS 箱子模型由四個部分組成：內容（Content）、內邊距（Padding）、邊框（Border）和外邊距（Margin）。內容區域存放實際的內容，內邊距圍繞著內容區域，邊框圍繞著內邊距，最外層的外邊距則是盒子和其他元素之間的空白區域。
 </TextAlignJustify>
+
+![Image](https://i.imgur.com/k0JVwK2.png)
 
 ### 請解釋 CSS 預處理器及其優點
 
@@ -42,8 +47,6 @@ CSS 預處理器，如 Sass / SCSS、LESS 或 Stylus，是一種腳本語言，�
 <TextAlignJustify>
 DOM（文件物件模型 Document Object Model）是一個跨平台和語言獨立的介面，讓程式能夠讀取和更新文件的內容、結構以及樣式。DOM 將 HTML、XML 或 SVG 文件表示為節點和物件的樹狀結構，讓開發者可以用 JavaScript 操作這些節點，進行新增、移除或修改頁面的元素和內容。
 </TextAlignJustify>
-
-![Image](https://i.imgur.com/k0JVwK2.png)
 
 ### 請解釋 const、let 和 var 的作用域差異。
 
@@ -444,3 +447,5 @@ package-lock.json（npm）或 yarn.lock（Yarn）記錄了安裝的每個依賴�
 [為什麼更新 React 中的 state 要用 immutable 的寫法? 什麼是 immutable? 該如何寫才會是 immutable?](https://www.explainthis.io/zh-hant/swe/react-why-immutable)
 
 [React 面試題詳解 - 導覽](https://www.explainthis.io/zh-hant/swe/react)
+
+<Giscus />
