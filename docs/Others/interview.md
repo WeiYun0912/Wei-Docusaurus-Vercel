@@ -1,9 +1,9 @@
 ---
 title: "前端面試考題"
 
-keywords: [html, css, js, react]
+keywords: [html, css, js, react, 前端面試, 前端面試題目, 前端面試考題]
 
-description: 前端面試考題
+description: 前端面試考題, 前端面試題目, 前端面試考題
 
 author: WeiYun0912
 
@@ -138,7 +138,7 @@ JavaScript 的繼承（Inherit）是基於原型（Prototype）的。每個 Java
 非同步程式設計是指允許程式在等待某個長時間運行的任務（例如，I/O 操作如網絡請求或檔案讀寫）完成時，繼續執行其他任務的程式設計方式。JavaScript 中實現非同步程式設計的方法有多種，包括回調函式、Promises 和 async/await。例如，使用Promise進行網絡請求：
 </TextAlignJustify>
 
-```js showLineNumbers
+```js
 fetch("https://api.example.com/data")
   .then((response) => response.json())
   .then((data) => console.log(data))
@@ -253,9 +253,7 @@ Suspense 是一個用於在元件渲染過程中處理非同步操作的特殊�
 React 18 中的渲染流程主要由三個步驟組成：
 
 1. 觸發更新: 更新可以透過多種方式觸發，包括元件的狀態或屬性的改變，以及父元件的重新渲染等。 與先前的版本不同，React 18 中引入了一種新的觸發更新的機制，稱為 Scheduler。 Scheduler 負責根據一定的優先順序和排程策略來決定何時執行更新。
-
 2. Reconciliation（協調）: 一旦更新被觸發，React 將執行協調過程，比較新的 Virtual DOM 和舊的 Virtual DOM，找出需要更新的部分。 這個過程包括 Diff 演算法的執行，確定需要進行的 DOM 更新操作。
-
 3. Render（渲染）: 一旦協調完成，React 將使用更新的 Virtual DOM 來進行實際的渲染操作，更新頁面上的 DOM 結構。 在這一步驟中，React 會盡可能地批次更新，以提高效能和效率。
 
 React 18 中的渲染流程在更新觸發、協調和渲染三個步驟之間進行，並透過 Scheduler 來管理更新的調度和優先級，以提供更好的效能和使用者體驗。
@@ -341,7 +339,7 @@ JSX 在語法上看起來與 HTML 相近，但它其實是 JavaScript 的語法�
 JSX 本質上做的事情是：生成 React 元素(elements)，它其實是 React.createElement(component, props, ...children) 函式的語法糖。可以看到下面的例子
 </TextAlignJustify>
 
-```jsx showLineNumbers
+```jsx
 <MyButton color="blue" shadowSize={2}>
   Click Me
 </MyButton>
@@ -349,7 +347,7 @@ JSX 本質上做的事情是：生成 React 元素(elements)，它其實是 Reac
 
 等同於
 
-```jsx showLineNumbers
+```jsx
 React.createElement(MyButton, { color: "blue", shadowSize: 2 }, "Click Me");
 ```
 
@@ -410,7 +408,7 @@ React.createElement(MyButton, { color: "blue", shadowSize: 2 }, "Click Me");
 package-lock.json（npm）或 yarn.lock（Yarn）記錄了安裝的每個依賴的確切版本，以確保項目在不同環境中安裝相同版本的依賴，從而避免了因依賴版本差異帶來的問題。
 
 當下 npm ci 時，是照 package-lock.json 下載依賴的，確保 CI 時的依賴不會跑掉，不同於 npm install 是照 package.json 下載依賴，有可能導致依賴不同的 runtime error。
-</TextAlignJustify>
+`</TextAlignJustify>`
 
 ### 解釋前端性能優化的常見方法有哪些？
 
