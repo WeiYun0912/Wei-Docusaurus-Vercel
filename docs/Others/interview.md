@@ -226,7 +226,7 @@ AJAX（Asynchronous JavaScript and XML）是一種在無需重新載入整個頁
 
 ### setState 是同步還是非同步?
 
-非同步，詳細可以看[這支影片](https://www.youtube.com/watch?v=heMEYoFUYD0&ab_channel=WeiWei)。
+setState 操作本身不是非同步，在狀態更新時 React 會將多個 setState batch update，以提高性能， React 可能會延遲執行 setState，最後在 event loop 裡面一次性的更新狀態，所以 setState 是看起來像非同步，其實不是。
 
 ### 什麼是 batch update?
 
