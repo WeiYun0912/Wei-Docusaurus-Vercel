@@ -40,6 +40,9 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+- 2024-05-22：新增 <Link to="/docs/Vue/Vue-Basic">Vue 基礎語法</Link> 文章。
+- 2024-05-22：新增 <Link to="/docs/Vue/Vue-Emit">Vue Emit 用法</Link> 文章。
+- 2024-05-22：新增 <Link to="/docs/Vue/Vue-Slot">Vue Slot 用法</Link> 文章。
 - 2024-05-22：新增 <Link to="/docs/Vue/Vue-ESLint">個人常用的 Vue ESLint Rules</Link> 文章。
 - 2024-02-26：新增 <Link to="/docs/Others/interview">前端面試考題</Link> 文章。
 - 2024-01-11：新增 <Link to="/docs/TypeScript/TypeScript-Wrapper-Component">React Batter Wrapper Component (ComponentPropsWithoutRef)</Link> 文章。
