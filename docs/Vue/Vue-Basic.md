@@ -147,6 +147,102 @@ const text = ref('')
 </script>
 ```
 
+### 在自訂元件中使用 v-model
+
+如果要在我們自訂的元件使用 v-model，就必須做額外的設定。
+
+先在元件中綁定 v-model
+
+```jsx title='AppCourse.vue' showLineNumbers
+<template>
+  <AppCourseInput v-model="searchText" />
+  {{ searchText }}
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import AppCourseInput from './AppCourseInput.vue'
+const searchText = ref('')
+</script>
+```
+
+而在元件內部，必須使用 `defineProps` 和 `defineEmits` 來定義，這邊要注意的是 `modelValue` 和 `update:modelValue` 這兩個名稱是固定的，沒有辦法更改，所以只要名字打錯，就會沒有效果。
+
+```jsx title='AppCourseInput.vue' showLineNumbers
+<template>
+  <input
+    type="text"
+    :value="modelValuea"
+    placeholder="Enter text...."
+    @input="$emit('update:modelValue', $event.target.value)"
+  />
+</template>
+
+<script setup>
+defineProps({
+  modelValue: {
+    type: String,
+    default: () => ''
+  }
+})
+defineEmits(['update:modelValue'])
+</script>
+
+```
+
+### 在自訂元件中使用多個 v-model
+
+如果要在自訂元件中使用多個 v-model，則需要更改一下寫法。
+
+這邊新增了一個 category 的響應式數據，然後將原本的寫法更改為 `v-model:searchText="searchText"`，並同時新增 `v-model:category="category"`
+
+```jsx title='AppCourse.vue' showLineNumbers
+<template>
+  <AppCourseInput v-model:searchText="searchText" v-model:category="category" />
+  {{ searchText }}
+  {{ category }}
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import AppCourseInput from './AppCourseInput.vue'
+const searchText = ref('')
+const category = ref('default')
+</script>
+```
+
+```jsx title='AppCourseInput.vue' showLineNumbers
+<template>
+  <input
+    type="text"
+    :value="searchText"
+    placeholder="Enter text...."
+    @input="$emit('update:searchText', $event.target.value)"
+  />
+
+  <select :value="category" @change="$emit('update:category', $event.target.value)">
+    <option value="toy">玩具</option>
+    <option value="clothe">衣物</option>
+    <option value="food">食品</option>
+  </select>
+</template>
+
+<script setup>
+defineProps({
+  searchText: {
+    type: String,
+    default: () => ''
+  },
+
+  category: {
+    type: String,
+    default: () => 'default'
+  }
+})
+defineEmits(['update:searchText', 'update:category'])
+</script>
+```
+
 ## v-on
 
 `v-on` 是 Vue 提供監聽 DOM 事件的語法，但在撰寫的時候並不會寫 v-on 而是用 `@` 符號取代之，例如我們如果需要 onClick 事件的話，就會寫 `@click`。
@@ -288,3 +384,31 @@ const number = 1
 ```
 
 ![Image](https://i.imgur.com/wZkHfYO.png)
+
+## watch
+
+如果要去監聽`響應式數據`的變化時，可以使用 `watch`。
+
+我們使用 `watch` 監聽了 `count`，當 `count` 的值有變化的時候，就會觸發 `watch` 裡面的 function，該 function 可以接收到新的值與舊的值。
+
+```jsx title='App.vue' showLineNumbers
+<template>
+  {{ count }}
+  <button @click="count += 1">c</button>
+</template>
+
+<script setup>
+import { ref, watch } from 'vue'
+
+const count = ref(1)
+
+watch(count, (newValue, oldValue) => {
+  console.log('new', newValue)
+  console.log('old', oldValue)
+})
+</script>
+```
+
+## 參考資料
+
+[Vue 3.x 全家桶完全指南与实战（TypeScript + Vue Router 4 + Vuex 4...）](https://www.udemy.com/course/vue3-vue-router4-vuex4-complete-tutorial/)
