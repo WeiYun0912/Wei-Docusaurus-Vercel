@@ -40,6 +40,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+- 2024-05-23：新增 <Link to="/docs/Vue/Vue-Dynamic-Render-HTML">Vue 使用動態元件渲染 HTML</Link> 文章。
 - 2024-05-23：新增 <Link to="/docs/Vue/Vue-Provide-Inject">Vue Provide 與 Inject 用法</Link> 文章。
 - 2024-05-23：新增 <Link to="/docs/Vue/Vue-Directive">Vue 自訂語法 Directive 用法</Link> 文章。
 - 2024-05-23：新增 <Link to="/docs/Vue/Vue-Basic">Vue 基礎語法</Link> 文章。
