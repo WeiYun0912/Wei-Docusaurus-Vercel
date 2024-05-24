@@ -40,6 +40,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+- 2024-05-24：新增 <Link to="/docs/Vue/Vue-Lazy-Component">Vue Lazy Component (definedAsyncComponent)</Link> 文章。
 - 2024-05-24：新增 <Link to="/docs/Vue/Vue-Dynamic-Render-Component">Vue 動態載入 Component</Link> 文章。
 - 2024-05-24：新增 <Link to="/docs/Vue/Vue-Global-Component">Vue 如何定義全域 Component</Link> 文章。
 - 2024-05-24：新增 <Link to="/docs/Others/Husky-Lint-Staged">檢查 Git Staged 的檔案是否符合 ESLint 規範 (git hook, husky, lint-staged, eslint)</Link> 文章。
