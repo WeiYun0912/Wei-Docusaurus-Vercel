@@ -40,6 +40,8 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+- 2024-05-26：新增 <Link to="/docs/Vue/Vue-Router">Vue Router</Link> 文章。
+- 2024-05-26：新增 <Link to="/docs/Vue/Vue-Composable">Vue 使用 Composable 將相同的程式碼邏輯抽離</Link> 文章。
 - 2024-05-24：新增 <Link to="/docs/Vue/Vue-Lazy-Component">Vue Lazy Component (definedAsyncComponent)</Link> 文章。
 - 2024-05-24：新增 <Link to="/docs/Vue/Vue-Dynamic-Render-Component">Vue 動態載入 Component</Link> 文章。
 - 2024-05-24：新增 <Link to="/docs/Vue/Vue-Global-Component">Vue 如何定義全域 Component</Link> 文章。
