@@ -16,6 +16,8 @@ og:description: Vue Router
 
 記錄一下 `vue-router` 的一些使用方法，不是教學文章~
 
+有些只記錄程式碼，沒有寫敘述。
+
 ## RouterLink
 
 `RouterLink` component 的 `to` 能讓我們跳轉到其他路由
@@ -729,5 +731,93 @@ router.beforeResolve((to, from) => {
 ```
 
 ## 路由導航
+
+## meta
+
+```js title='router.js' showLineNumbers
+const routes = [
+  {
+    path: "/posts",
+    component: PostsLayout,
+    children: [
+      {
+        path: "new",
+        component: PostsNew,
+        meta: { requiresAuth: true }, // 只有認證過的使用者可以建立文章
+      },
+      {
+        path: ":id",
+        component: PostsDetail,
+        meta: { requiresAuth: false }, // 任何人都可以閱讀文章
+      },
+    ],
+  },
+];
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth && !auth.isLoggedIn()) {
+    // 如果路由需要認證且使用者未登入，則重新導向到登入頁面
+    return {
+      path: "/login",
+      query: { redirect: to.fullPath },
+    };
+  }
+  next();
+});
+```
+
+## scrollBehavior
+
+```js title='router.js' showLineNumbers
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes: [...],
+  scrollBehavior(to, from, savedPosition) {
+    // 回到指定的滾動位置
+    const scroll = {};
+    if (to.meta.toTop) scroll.top = 0;
+    if (to.meta.smoothScroll) scroll.behavior = 'smooth';
+    return scroll;
+  }
+})
+
+const routes = [
+  {
+    path: "/posts",
+    component: PostsLayout,
+    children: [
+      {
+        path: "new",
+        component: PostsNew,
+        meta: { toTop: true, smoothScroll: true }
+      },
+    ],
+  },
+];
+```
+
+## Lazy Import
+
+如果不希望 Component 在一開始的時候就載入，可以使用 Lazy Import 的方式。
+
+```js title='router.js' showLineNumbers
+const BlogPostView = () => import("@/views/blog/BlogPostView.vue");
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: HomeView,
+    },
+    {
+      path: "/blogPost",
+      name: "blogPost",
+      component: BlogPostView,
+    },
+  ],
+});
+```
 
 # 持續記錄中...
