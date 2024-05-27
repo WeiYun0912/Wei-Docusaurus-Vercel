@@ -571,7 +571,7 @@ const router = createRouter({
 
 ## push
 
-```js title='router.js' showLineNumbers {16-26}
+```js title='router.js' showLineNumbers {14-18}
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -676,5 +676,58 @@ const router = createRouter({
   <RouterView name="footer" />
 </template>
 ```
+
+## 全域導航生命週期
+
+### beforeEach
+
+`beforeEach` 會在路由改變之前觸發，較常用於權限驗證。
+
+```js title='router.js' showLineNumbers
+const login = false;
+
+router.beforeEach((to, from) => {
+  if (to.path.startsWith("/blog")) {
+    if (!login) {
+      return "/";
+    }
+  }
+});
+```
+
+### beforeResolve
+
+`beforeResolve` 會在 `beforeEach` 後執行，較常用於使用者登入後的一些操作，像是讀取資料。
+
+```js title='router.js' showLineNumbers
+const login = true;
+
+router.beforeEach((to, from) => {
+  if (to.path.startsWith("/blog")) {
+    console.log("hi");
+    if (!login) {
+      return "/";
+    }
+  }
+});
+
+router.beforeResolve((to, from) => {
+  if (to.path.startsWith("/blog")) {
+    console.log("使用者登入成功");
+  }
+});
+```
+
+### afterEach
+
+`afterEach` 會在頁面跳轉後執行
+
+```js title='router.js' showLineNumbers
+router.beforeResolve((to, from) => {
+  document.title = to.path;
+});
+```
+
+## 路由導航
 
 # 持續記錄中...
