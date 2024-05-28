@@ -140,6 +140,38 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\night-owl.omp.json" | Invok
 }
 ```
 
+## History Autocomplete
+
+順便記錄一下要怎麼讓我們的 `Windows Terminal` 支援 `History Autocomplete`
+
+![Image](https://i.imgur.com/NCeuziX.png)
+
+先安裝 `PSReadLine`
+
+```
+Install-Module PSReadLine -Force
+```
+
+確認是否安裝成功
+
+![Image](https://i.imgur.com/4EsOGpj.png)
+
+設定 History Autocomplete
+
+```
+Set-PSReadLineOption -PredictionSource History
+```
+
+之後將 `Windows Terminal` 關閉後重新開啟，並執行以下指令：
+
+```
+Set-PSReadLineOption -PredictionViewStyle ListView
+```
+
+現在應該會看到 Autocomplete 的呈現方式變成 List 了
+
+![Image](https://i.imgur.com/b7TCyrq.png)
+
 ## 參考資料
 
 [oh-my-posh](https://ohmyposh.dev/)
