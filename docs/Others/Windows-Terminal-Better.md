@@ -172,6 +172,22 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 
 ![Image](https://i.imgur.com/b7TCyrq.png)
 
+但現在重開 `Windows Terminal` 後，會發現 List 消失了。
+
+所以執行
+
+```
+notepad $PROFILE
+```
+
+把以下這段貼到檔案中
+
+```
+Set-PSReadLineOption -PredictionViewStyle ListView
+```
+
+![Image](https://i.imgur.com/fQb3Jai.png)
+
 ## 參考資料
 
 [oh-my-posh](https://ohmyposh.dev/)
