@@ -40,6 +40,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+- 2024-05-28：新增 <Link to="/docs/Others/Windows-Terminal-Better">美化你的 Windows Terminal (oh-my-posh)</Link> 文章。
 - 2024-05-26：新增 <Link to="/docs/Vue/Vue-Router">Vue Router</Link> 文章。
 - 2024-05-26：新增 <Link to="/docs/Vue/Vue-Composable">Vue 使用 Composable 將相同的程式碼邏輯抽離</Link> 文章。
 - 2024-05-24：新增 <Link to="/docs/Vue/Vue-Lazy-Component">Vue Lazy Component (definedAsyncComponent)</Link> 文章。
