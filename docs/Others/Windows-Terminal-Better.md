@@ -130,6 +130,16 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\night-owl.omp.json" | Invok
 
 ![Image](https://i.imgur.com/FeDjx0k.png)
 
+## VS Code
+
+要是 `VS Code` 的 `Terminal` 有出現 `icon` 亂碼的問題，可以在 `VS Code` 的 `settings.json` 把我們下載的字體補上：
+
+```json
+{
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font'"
+}
+```
+
 ## 參考資料
 
 [oh-my-posh](https://ohmyposh.dev/)
