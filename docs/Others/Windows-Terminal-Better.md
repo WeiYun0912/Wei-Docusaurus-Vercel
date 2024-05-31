@@ -188,6 +188,30 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 
 ![Image](https://i.imgur.com/fQb3Jai.png)
 
+## Terminal-Icons
+
+最後安裝 `Terminal-Icons`
+
+```
+Install-Module -Name Terminal-Icons -Repository PSGallery -Force
+```
+
+執行
+
+```
+notepad $PROFILE
+```
+
+把以下這段貼到檔案中
+
+```
+Import-Module Terminal-Icons
+```
+
+![Image](https://i.imgur.com/Lc6k2Wy.png)
+
+![Image](https://i.imgur.com/VxpbgW8.png)
+
 ## 參考資料
 
 [oh-my-posh](https://ohmyposh.dev/)
