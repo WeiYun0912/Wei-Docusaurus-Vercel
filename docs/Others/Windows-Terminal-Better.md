@@ -217,3 +217,5 @@ Import-Module Terminal-Icons
 [oh-my-posh](https://ohmyposh.dev/)
 
 [🎨 Make Windows Terminal Look Better | Oh My Posh Guide](https://www.youtube.com/watch?v=-G6GbXGo4wo)
+
+<Giscus />
