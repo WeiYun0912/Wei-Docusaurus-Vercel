@@ -6,45 +6,128 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --ifm-color-primary: #2e8555;
+    --ifm-color-primary-dark: #29784c;
+    --ifm-color-primary-darker: #277148;
+    --ifm-color-primary-darkest: #205d3b;
+    --ifm-color-primary-light: #33925d;
+    --ifm-color-primary-lighter: #359962;
+    --ifm-color-primary-lightest: #3cad6e;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
 div[class^="announcementBar_"] {
-  font-size: 1.2em;
-  font-weight: bold;
-  background: repeating-linear-gradient(
-    35deg,
-    hsl(167, 68%, 85%),
-    hsl(167, 68%, 85%) 20px,
-    hsl(167, 68%, 95%) 10px,
-    hsl(167, 68%, 95%) 40px
-  );
+    font-size: 1.2em;
+    font-weight: bold;
+    background: repeating-linear-gradient(
+        35deg,
+        hsl(167, 68%, 85%),
+        hsl(167, 68%, 85%) 20px,
+        hsl(167, 68%, 95%) 10px,
+        hsl(167, 68%, 95%) 40px
+    );
 }
 
 .code-block-error-line {
-  background-color: #ff000020;
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-  border-left: 3px solid #ff000080;
+    background-color: #ff000020;
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+    border-left: 3px solid #ff000080;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        @apply px-6 py-2 rounded-full bg-primary text-white transition-all hover:scale-105 hover:shadow-lg;
+    }
+
+    .btn-secondary {
+        @apply px-6 py-2 rounded-full border-2 border-primary text-primary transition-all hover:bg-primary hover:text-white hover:scale-105;
+    }
+
+    .section-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 3rem;
+        background: linear-gradient(to right, var(--ifm-color-primary), var(--ifm-color-primary-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.banner-gradient {
+    background: var(--background-gradient);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #2e8555, #25c2a0);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+/* 你的其他自定義樣式 */
+
+@keyframes gradient-xy {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.animate-gradient-xy {
+    animation: gradient-xy 15s ease infinite;
+}
+
+/* 默認隱藏主頁導航項 */
+.header-home-link {
+    display: none;
+}
+
+/* 只在主頁顯示 */
+[data-page-type="home"] .header-home-link {
+    display: block;
 }
