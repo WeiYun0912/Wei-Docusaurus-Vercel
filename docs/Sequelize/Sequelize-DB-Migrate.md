@@ -348,6 +348,24 @@ npx sequelize-cli db:migrate:undo:all
 
 ### 6. 指定 rollback 的 migrate (TBD...)
 
+## 其他
+
+如果覺得要產生 migrate 檔案要輸入很長一段指令很麻煩，我們可以濃縮一下。
+
+在 `package.json` 中新增一個 script：
+
+```json
+"scripts": {
+    "migrate:generate": "npx sequelize-cli migration:generate --name"
+}
+```
+
+這樣我們就可以使用 `npm run migrate:generate <name>` 來產生 migrate 檔案了。
+
+```bash
+npm run migrate:generate <name>
+```
+
 ## 參考資料
 
 -   [Sequelize CLI](https://sequelize.org/docs/v6/other-topics/migrations/)
