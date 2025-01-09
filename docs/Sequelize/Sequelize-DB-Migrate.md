@@ -325,7 +325,7 @@ npx sequelize-cli db:migrate
 
 ### 4. rollback 最新一次的 migrate
 
-如果我們想回滾最新的 migrate，可以使用 `db:migrate:undo` 指令，這只會 rollback 最新一次的 migrate：
+如果我們想 rollback 最新的 migrate，可以使用 `db:migrate:undo` 指令，這只會 rollback 最新一次的 migrate：
 
 ```bash
 npx sequelize-cli db:migrate:undo
@@ -340,7 +340,7 @@ npx sequelize-cli db:migrate:undo
 
 ### 5. rollback 所有 migrate
 
-如果我們想回滾所有 migrate，可以使用 `db:migrate:undo:all` 指令，這會 rollback 所有已經執行的 migrate：
+如果我們想 rollback 所有 migrate，可以使用 `db:migrate:undo:all` 指令，這會 rollback 所有已經執行的 migrate：
 
 ```bash
 npx sequelize-cli db:migrate:undo:all
