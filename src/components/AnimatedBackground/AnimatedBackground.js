@@ -1,9 +1,11 @@
+// AnimatedBackground.jsx
 import React, { useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 
 const AnimatedBackground = ({ variant = "default" }) => {
     const containerId = useRef(`particles-${Math.random().toString(36).substr(2, 9)}`);
+    const canvasRef = useRef(null);
 
     const getColors = (variant) => {
         return variant === "primary" ? ["#ffffff", "#fffacd", "#ffd700"] : ["#ffffff", "#e6e6fa", "#b0c4de"];
@@ -11,6 +13,24 @@ const AnimatedBackground = ({ variant = "default" }) => {
 
     useEffect(() => {
         let isMounted = true;
+        let resizeTimeout;
+
+        const handleCanvasSize = () => {
+            const canvas = document.querySelector(`#${containerId.current} canvas`);
+            if (canvas) {
+                const pxRatio = window.devicePixelRatio || 1;
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                canvas.style.width = `${width}px`;
+                canvas.style.height = `${height}px`;
+                canvas.width = width * pxRatio;
+                canvas.height = height * pxRatio;
+
+                const ctx = canvas.getContext("2d");
+                ctx.scale(pxRatio, pxRatio);
+            }
+        };
 
         const initializeParticles = () => {
             if (!isMounted) return;
@@ -43,7 +63,7 @@ const AnimatedBackground = ({ variant = "default" }) => {
                 window.particlesJS(containerId.current, {
                     particles: {
                         number: {
-                            value: 50, // 減少一點粒子數量來平衡性能
+                            value: 100,
                             density: {
                                 enable: true,
                                 value_area: 1000,
@@ -53,7 +73,7 @@ const AnimatedBackground = ({ variant = "default" }) => {
                             value: colors,
                         },
                         shape: {
-                            type: ["circle", "edge", "star"], // 添加不同形狀的粒子
+                            type: ["circle", "edge", "star"],
                             stroke: {
                                 width: 0,
                                 color: "#000000",
@@ -127,12 +147,12 @@ const AnimatedBackground = ({ variant = "default" }) => {
                             },
                         },
                     },
-                    retina_detect: true,
+                    retina_detect: false,
                     fps_limit: 60,
                 });
 
-                // 添加 UFO 動畫
-                // 創建多個 UFO
+                handleCanvasSize();
+
                 const ufos = [
                     { class: styles.ufo1, image: "ufo.png" },
                     { class: styles.ufo2, image: "ufo2.png" },
@@ -146,6 +166,40 @@ const AnimatedBackground = ({ variant = "default" }) => {
                     ufoElement.style.backgroundImage = `url('/img/${image}')`;
                     particlesElement.appendChild(ufoElement);
                 });
+
+                // 在 initializeParticles 函數中添加
+                // 添加流星
+                for (let i = 0; i < 3; i++) {
+                    const meteor = document.createElement("div");
+                    meteor.className = styles.meteor;
+                    // 隨機位置但確保在視窗上方開始
+                    meteor.style.top = `${Math.random() * 30}%`;
+                    meteor.style.left = `${Math.random() * 100}%`;
+                    // 隨機延遲，讓流星不同時出現
+                    meteor.style.animationDelay = `${i * 2}s`;
+                    particlesElement.appendChild(meteor);
+                }
+
+                // 添加行星
+                const planet = document.createElement("div");
+                planet.className = styles.planet;
+                planet.style.top = "70%";
+                planet.style.right = "10%";
+                particlesElement.appendChild(planet);
+
+                // 添加一些小星球
+                for (let i = 0; i < 2; i++) {
+                    const smallPlanet = document.createElement("div");
+                    smallPlanet.className = styles.planet;
+                    smallPlanet.style.width = "30px";
+                    smallPlanet.style.height = "30px";
+                    smallPlanet.style.top = `${20 + i * 40}%`;
+                    smallPlanet.style.left = `${10 + i * 70}%`;
+                    smallPlanet.style.background = `radial-gradient(circle at 30% 30%, ${
+                        i === 0 ? "#ff6b6b" : "#4ecdc4"
+                    }, ${i === 0 ? "#c92a2a" : "#1e8b84"})`;
+                    particlesElement.appendChild(smallPlanet);
+                }
             } catch (error) {
                 console.error("Error initializing particles:", error);
             }
@@ -153,8 +207,20 @@ const AnimatedBackground = ({ variant = "default" }) => {
 
         initializeParticles();
 
+        const handleResize = () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                handleCanvasSize();
+            }, 250);
+        };
+
+        window.addEventListener("resize", handleResize);
+
         return () => {
             isMounted = false;
+            window.removeEventListener("resize", handleResize);
+            clearTimeout(resizeTimeout);
+
             if (window.pJSDom && Array.isArray(window.pJSDom)) {
                 try {
                     window.pJSDom.forEach((dom) => {
@@ -174,7 +240,7 @@ const AnimatedBackground = ({ variant = "default" }) => {
         <BrowserOnly>
             {() => (
                 <div className={styles.particlesContainer}>
-                    <div id={containerId.current} className={styles.particles} />
+                    <div id={containerId.current} className={styles.particles} ref={canvasRef} />
                 </div>
             )}
         </BrowserOnly>

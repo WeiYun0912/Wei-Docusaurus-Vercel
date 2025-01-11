@@ -1,9 +1,9 @@
 .particlesContainer {
-    position: absolute;
+    position: fixed; /* 改為 fixed */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* 使用 vh 單位 */
     z-index: 0;
     pointer-events: none;
     will-change: transform;
@@ -17,15 +17,20 @@
     transform: translateZ(0);
 }
 
-/* 確保在暗色主題下可見 */
-:global(.dark) .particles {
-    background: transparent;
+.particles canvas {
+    position: absolute; /* 添加這行 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
-
 .ufo {
-    position: absolute;
-    width: 64px;
-    height: 64px;
+    position: fixed; /* 改為 fixed */
+    width: 40px; /* 調整大小 */
+    height: 40px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -33,92 +38,168 @@
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
-/* UFO 1 - 上方水平飛行 */
+/* UFO 1 - 從左到右 */
 .ufo1 {
-    animation: flyUfoTop 20s linear infinite;
-    top: 10%;
+    animation: flyUfoTopLeft 15s linear infinite;
+    top: 15%;
 }
 
-/* UFO 2 - 中上方對角線飛行 */
+/* UFO 2 - 從右到左 */
 .ufo2 {
-    animation: flyUfoDiagonal 25s linear infinite;
-    top: 30%;
+    animation: flyUfoTopRight 18s linear infinite;
+    top: 35%;
 }
 
-/* UFO 3 - 中下方水平飛行 */
+/* UFO 3 - 從左到右 */
 .ufo3 {
-    animation: flyUfoMiddle 22s linear infinite;
-    top: 50%;
+    animation: flyUfoBottomLeft 20s linear infinite;
+    top: 55%;
 }
 
-/* UFO 4 - 下方對角線飛行 */
+/* UFO 4 - 從右到左 */
 .ufo4 {
-    animation: flyUfoBottomDiagonal 28s linear infinite;
-    top: 70%;
+    animation: flyUfoBottomRight 16s linear infinite;
+    top: 75%;
 }
 
-/* 水平飛行動畫 */
-@keyframes flyUfoTop {
+@keyframes flyUfoTopLeft {
     0% {
-        left: -100px;
-        transform: translateY(0) translateZ(0);
-    }
-    25% {
-        transform: translateY(20px) translateZ(0);
-    }
-    75% {
-        transform: translateY(-20px) translateZ(0);
-    }
-    100% {
-        left: 100%;
-        transform: translateY(0) translateZ(0);
-    }
-}
-
-/* 對角線飛行動畫 */
-@keyframes flyUfoDiagonal {
-    0% {
-        left: -100px;
-        transform: translateY(0) translateZ(0);
+        left: -50px;
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-50px) translateZ(0);
+        transform: translateY(30px);
     }
     100% {
-        left: 100%;
-        transform: translateY(50px) translateZ(0);
+        left: calc(100% + 50px);
+        transform: translateY(0);
     }
 }
 
-/* 中間水平飛行動畫 */
-@keyframes flyUfoMiddle {
+@keyframes flyUfoTopRight {
     0% {
-        right: -100px;
-        transform: translateY(0) translateZ(0) scaleX(-1);
-    }
-    25% {
-        transform: translateY(30px) translateZ(0) scaleX(-1);
-    }
-    75% {
-        transform: translateY(-30px) translateZ(0) scaleX(-1);
-    }
-    100% {
-        right: 100%;
-        transform: translateY(0) translateZ(0) scaleX(-1);
-    }
-}
-
-/* 下方對角線飛行動畫 */
-@keyframes flyUfoBottomDiagonal {
-    0% {
-        right: -100px;
-        transform: translateY(0) translateZ(0) scaleX(-1);
+        right: -50px;
+        transform: translateY(0) scaleX(-1);
     }
     50% {
-        transform: translateY(40px) translateZ(0) scaleX(-1);
+        transform: translateY(-30px) scaleX(-1);
     }
     100% {
-        right: 100%;
-        transform: translateY(-40px) translateZ(0) scaleX(-1);
+        right: calc(100% + 50px);
+        transform: translateY(0) scaleX(-1);
+    }
+}
+
+@keyframes flyUfoBottomLeft {
+    0% {
+        left: -50px;
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        left: calc(100% + 50px);
+        transform: translateY(0);
+    }
+}
+
+@keyframes flyUfoBottomRight {
+    0% {
+        right: -50px;
+        transform: translateY(0) scaleX(-1);
+    }
+    50% {
+        transform: translateY(20px) scaleX(-1);
+    }
+    100% {
+        right: calc(100% + 50px);
+        transform: translateY(0) scaleX(-1);
+    }
+}
+
+.meteor {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, transparent 100%);
+    box-shadow: 0 0 15px white;
+    animation: meteor 3s linear infinite;
+}
+
+@keyframes meteor {
+    0% {
+        transform: rotate(-45deg) translateX(-100%);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-45deg) translateX(200vh);
+        opacity: 0;
+    }
+}
+
+.planet {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #7b68ee, #483d8b);
+    box-shadow: inset -4px -4px 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(123, 104, 238, 0.3);
+    animation: rotatePlanet 30s linear infinite;
+}
+
+@keyframes rotatePlanet {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.glow {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(123, 104, 238, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+}
+
+.starCluster {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+    animation: twinkle 5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
     }
 }
