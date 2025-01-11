@@ -1,14 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "./styles.module.css";
-import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 
 const TechStack = ({ tech }) => {
     return (
         <div className={styles.techContainer}>
-            <div className={styles.backgroundWrapper}>
-                <AnimatedBackground variant="secondary" />
-            </div>
             <div className={styles.content}>
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -16,7 +12,7 @@ const TechStack = ({ tech }) => {
                     viewport={{ once: true }}
                     className={styles.techTitle}
                 >
-                    技術棧
+                    Tech Stack
                 </motion.h2>
                 <div className={styles.techGrid}>
                     {tech.map((item, index) => (

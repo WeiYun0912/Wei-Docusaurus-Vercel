@@ -1,86 +1,6 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Layout from "@theme/Layout";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Atropos from "atropos/react";
-import AnimatedBackground from "../components/AnimatedBackground/AnimatedBackground";
-import VanillaTilt from "vanilla-tilt";
-
-const container = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.15,
-            duration: 0.8,
-        },
-    },
-};
-
-const item = {
-    hidden: { opacity: 0, y: 40 },
-    show: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            ease: "easeOut",
-            duration: 0.8,
-        },
-    },
-};
-
-const currentTechStack = [
-    "Visual Studio Code",
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "JSON",
-    "Markdown",
-    "React",
-    "React Native (Expo)",
-    "Material UI",
-    "React Native Elements",
-    "Redux",
-    "React Query",
-    "MongoDB",
-    "Node.JS",
-    "Trello",
-];
-
-const previousTechStack = [
-    "Visual Studio Code",
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "jQuery",
-    "PHP",
-    "Python",
-    "Puppeteer",
-    "Webpack",
-    "JSON",
-    "Markdown",
-    "React",
-    "React Native (Expo)",
-    "Material UI",
-    "React Native Elements",
-    "Redux",
-    "React Router",
-    "Node.JS",
-    "Ethereum",
-    "Solidity",
-    "Hyperledger Fabric",
-    "web3.js",
-    "MySQL",
-    "MongoDB",
-    "Firebase",
-    "Heroku",
-    "Figma",
-    "Trello",
-    "GraphQL",
-    "Apollo GraphQL",
-    "Codeigniter 3",
-    "Linux",
-    "Kali Linux",
-];
+import { motion, useScroll } from "framer-motion";
 
 const achievements = [
     {
@@ -122,46 +42,6 @@ const achievements = [
     },
 ];
 
-const TechCard = ({ tech, index }) => {
-    const tiltRef = useRef(null);
-
-    useEffect(() => {
-        VanillaTilt.init(tiltRef.current, {
-            max: 25,
-            speed: 300,
-            scale: 1.05,
-            glare: true,
-            "max-glare": 0.5,
-            gyroscope: false,
-        });
-
-        return () => {
-            if (tiltRef.current) {
-                tiltRef.current.vanillaTilt.destroy();
-            }
-        };
-    }, []);
-
-    return (
-        <motion.div
-            ref={tiltRef}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="relative group"
-        >
-            <div className="absolute inset-0 bg-gradient-to-r rounded-xl opacity-50 blur-sm transition-all duration-300 from-primary-500 to-primary-800 group-hover:blur group-hover:opacity-75" />
-            <div className="flex relative flex-col justify-center items-center p-4 h-32 rounded-xl border shadow-xl backdrop-blur-xl transition-all duration-300 bg-black/50 border-white/10 group-hover:border-primary-500/50">
-                <span className="mb-2 text-2xl">{getTechIcon(tech)}</span>
-                <span className="text-sm font-medium text-center transition-colors text-white/90 group-hover:text-white">
-                    {tech}
-                </span>
-            </div>
-        </motion.div>
-    );
-};
-
 // 修改 Gallery Section 部分
 const galleryVariants = {
     hidden: { opacity: 0 },
@@ -191,21 +71,16 @@ const photoVariants = {
 export default function About() {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll();
-    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
     return (
         <Layout title="About Me" description="About Me">
             <div className="relative min-h-screen from-gray-900 to-black">
-                <div className="fixed inset-0 -z-10">
-                    <AnimatedBackground variant="primary" />
-                </div>
-
                 <div className="absolute inset-0via-transparent from-black/50 to-black/50" />
 
                 {/* Hero Section */}
                 <div className="overflow-hidden relative">
                     <div className="absolute inset-0 to-transparent from-primary-500/10" />
-                    <div className="container px-4 pt-24 pb-8 mx-auto">
+                    <div className="container px-4 pt-24 pb-4 mx-auto">
                         <motion.div className="mx-auto max-w-4xl text-center">
                             <motion.h1
                                 initial={{ opacity: 0, y: 20 }}
@@ -231,7 +106,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <main ref={containerRef} className="container mx-auto px-4 py-16 max-w-[1200px]">
+                <main ref={containerRef} className="container mx-auto px-4 py-12 max-w-[1200px]">
                     <div className="space-y-32">
                         {/* About Section */}
                         <motion.section
@@ -245,21 +120,31 @@ export default function About() {
                                 <p>
                                     在就讀大學的期間開始學習寫程式，喜歡利用程式幫朋友或家人解決問題。
                                     同時也會將所學之技術寫成技術文章上傳至
-                                    <a href="#" className="text-primary-400 hover:text-primary-300">
+                                    <a
+                                        href="https://medium.com/@weiyun0912"
+                                        target="_blank"
+                                        className="text-primary-400 hover:text-primary-300"
+                                    >
                                         Medium Post
                                     </a>
-                                    、
-                                    <a href="#" className="text-primary-400 hover:text-primary-300">
-                                        HackMD
-                                    </a>
                                     和
-                                    <a href="#" className="text-primary-400 hover:text-primary-300">
+                                    <a
+                                        href="https://github.com/WeiYun0912"
+                                        target="_blank"
+                                        className="text-primary-400 hover:text-primary-300"
+                                    >
                                         Github
                                     </a>
                                     。
                                 </p>
                                 <p>
-                                    Youtube
+                                    <a
+                                        href="https://www.youtube.com/@weiweicoding"
+                                        target="_blank"
+                                        className="text-primary-400 hover:text-primary-300"
+                                    >
+                                        Youtube
+                                    </a>
                                     頻道會不定時上傳程式教學，一方面是當自己忘記某個程式如何撰寫或使用時可以回顧，
                                     另一方面是希望能將撰寫時踩過的坑分享給正在學習的人。
                                 </p>
@@ -277,7 +162,7 @@ export default function About() {
                         </motion.section>
 
                         {/* Skills Section */}
-                        <motion.section
+                        {/* <motion.section
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
@@ -304,11 +189,30 @@ export default function About() {
                                     ))}
                                 </div>
                             </div>
-                        </motion.section>
+                        </motion.section> */}
 
                         {/* Achievements Section */}
                         <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
                             <h2 className="mb-12 text-3xl font-bold text-center">Achievements</h2>
+
+                            <motion.div
+                                key={1}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 1 * 0.1 }}
+                                className="p-6 mb-2 rounded-xl backdrop-blur-sm transition-all bg-white/5 hover:bg-white/10"
+                            >
+                                <a
+                                    href="https://www.sciencedirect.com/science/article/pii/S2405959523001650"
+                                    target="_blank"
+                                >
+                                    <h3 lassName="mb-3 text-xl font-semibold">
+                                        碩士論文：Applying Ethereum blockchain and IPFS to construct a multi-party
+                                        used-car trading and management system (ICT Express | Journal)
+                                    </h3>
+                                </a>
+                            </motion.div>
                             <div className="grid gap-8 md:grid-cols-2">
                                 {achievements.map((achievement, index) => (
                                     <motion.div
@@ -325,11 +229,6 @@ export default function About() {
                                         )}
                                     </motion.div>
                                 ))}
-                            </div>
-                            <div className="p-6 mt-12 text-center rounded-xl backdrop-blur-sm bg-primary-500/20">
-                                <p className="text-2xl font-bold text-primary-300">
-                                    💰️ 競賽累積獎金(非個人)：$216,400
-                                </p>
                             </div>
                         </motion.section>
 

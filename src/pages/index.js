@@ -6,7 +6,6 @@ import Projects from "../components/Projects/Projects";
 import TechStack from "../components/TechStack/TechStack";
 import Experience from "../components/Experience/Experience";
 import BrowserOnly from "@docusaurus/BrowserOnly";
-import AnimatedBackground from "../components/AnimatedBackground/AnimatedBackground";
 import { useIsHomePage } from "../hooks/useIsHomePage";
 
 // 引入數據
@@ -52,7 +51,7 @@ export default function Home() {
 
                     <main className="relative">
                         {/* Tech Stack Section */}
-                        <section id="tech-stack" className="relative ">
+                        <section id="tech-stack" className="relative">
                             <div className="relative z-9999">
                                 <TechStack tech={Tech} />
                             </div>
@@ -60,15 +59,14 @@ export default function Home() {
 
                         {/* Projects Container */}
                         <div id="projects">
-                            <Projects ProjectsData={Project} title="曾經參與過的專案" variant="primary" />
-                            <Projects ProjectsData={SideProject} title="個人作品集" variant="secondary" />
+                            <Projects ProjectsData={Project} title="Projects" variant="primary" />
+                            <Projects ProjectsData={SideProject} title="Side Projects" variant="secondary" />
                         </div>
 
                         {/* Experience Section */}
-                        <section id="experience" className=" relative overflow-hidden">
-                            <AnimatedBackground variant="secondary" />
-                            <div className="container mx-auto px-4 relative z-10">
-                                <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                        <section id="experience" className="overflow-hidden relative">
+                            <div className="container relative z-10 px-4 mx-auto">
+                                <h2 className="mb-16 text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 md:text-5xl">
                                     求學經歷
                                 </h2>
                                 <BrowserOnly fallback={<Loading />}>
@@ -85,6 +83,6 @@ export default function Home() {
 
 const Loading = () => (
     <div className="flex items-center justify-center min-h-[200px]">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-primary"></div>
+        <div className="w-16 h-16 rounded-full border-t-2 border-b-2 animate-spin border-primary"></div>
     </div>
 );

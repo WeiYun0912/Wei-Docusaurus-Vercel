@@ -130,24 +130,6 @@ const config = {
                         label: "Youtube",
                         position: "right",
                     },
-                    {
-                        label: "#技術棧",
-                        to: "/#tech-stack",
-                        position: "left",
-                        className: "header-home-link",
-                    },
-                    {
-                        label: "#專案作品",
-                        to: "/#projects",
-                        position: "left",
-                        className: "header-home-link",
-                    },
-                    {
-                        label: "#求學經歷",
-                        to: "/#experience",
-                        position: "left",
-                        className: "header-home-link",
-                    },
                 ],
             },
             footer: {

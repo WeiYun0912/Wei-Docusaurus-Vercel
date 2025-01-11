@@ -2,13 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import styles from "./styles.module.css";
-import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
 
 const Projects = ({ ProjectsData, title, variant = "primary" }) => {
     return (
         <section className={styles.projectsContainer}>
-            <AnimatedBackground variant={variant} />
-
             <div className={styles.projectsBox}>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -62,6 +59,7 @@ const ProjectCard = ({
 
                 {tech && (
                     <div className={styles.techStack}>
+                        {role && <span className={styles.techTag}>{role}</span>}
                         {tech.map((item) => (
                             <span key={item.name} className={styles.techTag}>
                                 {item.name}

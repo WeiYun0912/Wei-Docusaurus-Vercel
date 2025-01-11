@@ -1,69 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./styles.module.css";
 import Link from "@docusaurus/Link";
 import { motion } from "framer-motion";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 
 const Banner = () => {
-    useEffect(() => {
-        const initializeParticles = () => {
-            const particlesElement = document.getElementById("particles-js");
-            if (particlesElement && typeof particlesJS !== "undefined") {
-                particlesJS("particles-js", {
-                    particles: {
-                        number: { value: 80, density: { enable: true, value_area: 800 } },
-                        color: { value: "#ffffff" },
-                        shape: { type: "circle" },
-                        opacity: {
-                            value: 0.5,
-                            random: false,
-                            animation: { enable: true, speed: 1, minimumValue: 0.1, sync: false },
-                        },
-                        size: {
-                            value: 3,
-                            random: true,
-                            animation: { enable: true, speed: 2, minimumValue: 0.1, sync: false },
-                        },
-                        lineLinked: {
-                            enable: true,
-                            distance: 150,
-                            color: "#ffffff",
-                            opacity: 0.4,
-                            width: 1,
-                        },
-                        move: {
-                            enable: true,
-                            speed: 1,
-                            direction: "none",
-                            random: false,
-                            straight: false,
-                            outMode: "out",
-                            bounce: false,
-                        },
-                    },
-                    interactivity: {
-                        detectOn: "canvas",
-                        events: {
-                            onHover: { enable: true, mode: "repulse" },
-                            onClick: { enable: true, mode: "push" },
-                            resize: true,
-                        },
-                    },
-                    retina_detect: true,
-                });
-            } else {
-                setTimeout(initializeParticles, 100);
-            }
-        };
-
-        initializeParticles();
-    }, []);
-
     return (
         <BrowserOnly fallback={<Loading />}>
             {() => (
                 <div className={styles.bannerContainer}>
-                    <div id="particles-js" className={styles.particles} />
                     <div className={styles.bannerContent}>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

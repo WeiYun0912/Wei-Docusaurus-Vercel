@@ -131,3 +131,15 @@ html {
 [data-page-type="home"] .header-home-link {
     display: block;
 }
+
+/* 在你的全局 CSS 文件中 */
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* 確保內容在背景之上 */
+#__docusaurus {
+    position: relative;
+    z-index: 1;
+}
