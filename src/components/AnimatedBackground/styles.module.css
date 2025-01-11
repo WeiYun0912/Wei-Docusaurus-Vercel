@@ -42,21 +42,18 @@
 /* UFO 2 - 中上方對角線飛行 */
 .ufo2 {
     animation: flyUfoDiagonal 25s linear infinite;
-    animation-delay: 5s;
     top: 30%;
 }
 
 /* UFO 3 - 中下方水平飛行 */
 .ufo3 {
     animation: flyUfoMiddle 22s linear infinite;
-    animation-delay: 10s;
     top: 50%;
 }
 
 /* UFO 4 - 下方對角線飛行 */
 .ufo4 {
     animation: flyUfoBottomDiagonal 28s linear infinite;
-    animation-delay: 15s;
     top: 70%;
 }
 
