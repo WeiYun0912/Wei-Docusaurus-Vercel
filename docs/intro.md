@@ -15,6 +15,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 筆記類別：
 
+-   <Link to="/docs/category/vue">Vue</Link>
 -   <Link to="/docs/category/react">React</Link>
 -   <Link to="/docs/category/react-native">React Native</Link>
 -   <Link to="/docs/category/puppeteer">Puppeteer</Link>
@@ -40,6 +41,8 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+-   2025-02-28：新增 <Link to="/docs/Vue/Vue-30/Vue-Use">VueUse 介紹</Link> 文章。
+-   2025-02-28：新增 <Link to="/docs/Vue/Vue-30/Vue-Render-Function">Vue Render Function</Link> 文章。
 -   2025-01-08：新增 <Link to="/docs/Sequelize/Sequelize-DB-Migrate">Sequelize DB Migrate</Link> 文章。
 -   2024-05-28：新增 <Link to="/docs/Others/Windows-Terminal-Better">美化你的 Windows Terminal (oh-my-posh)</Link> 文章。
 -   2024-05-26：新增 <Link to="/docs/Vue/Vue-Router">Vue Router</Link> 文章。
