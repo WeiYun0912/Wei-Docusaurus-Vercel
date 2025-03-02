@@ -41,8 +41,13 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
--   2025-02-28：新增 <Link to="/docs/Vue/Vue-30/Vue-Use">VueUse 介紹</Link> 文章。
--   2025-02-28：新增 <Link to="/docs/Vue/Vue-30/Vue-Render-Function">Vue Render Function</Link> 文章。
+-   2025-03-07：新增 <Link to="/docs/Vue/Vue-30/Vue-Lottie">Vue 使用 Lottie 動畫</Link> 文章。
+-   2025-03-06：新增 <Link to="/docs/Vue/Vue-30/Vue-Use">VueUse 介紹</Link> 文章。
+-   2025-03-05：新增 <Link to="/docs/Vue/Vue-30/Vue-Mitt">Vue 使用 mitt 進行跨元件溝通</Link> 文章。
+-   2025-03-04：新增 <Link to="/docs/Vue/Vue-30/Vue-Props">Vue 3 父元件傳遞 Props 到孫元件的 4 種常見方法</Link> 文章。
+-   2025-03-03：新增 <Link to="/docs/Vue/Vue-30/Vue-Render-Function">Vue Render Function</Link> 文章。
+-   2025-03-02：新增 <Link to="/docs/Vue/Vue-30/Vue-Watch-WatchEffect">Vue Watch 和 WatchEffect</Link> 文章。
+-   2025-03-01：新增 <Link to="/docs/Vue/Vue-30/Vue-Ref-Reactive-Computed">Vue Ref、Reactive、Computed</Link> 文章。
 -   2025-01-08：新增 <Link to="/docs/Sequelize/Sequelize-DB-Migrate">Sequelize DB Migrate</Link> 文章。
 -   2024-05-28：新增 <Link to="/docs/Others/Windows-Terminal-Better">美化你的 Windows Terminal (oh-my-posh)</Link> 文章。
 -   2024-05-26：新增 <Link to="/docs/Vue/Vue-Router">Vue Router</Link> 文章。
