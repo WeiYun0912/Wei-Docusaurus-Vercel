@@ -1,13 +1,13 @@
 ---
-title: "[Vue] Vue 3 父元件傳遞 Props 到孫元件的 4 種常見方法"
+title: "[vue] Vue 3 父元件傳遞 Props 到孫元件的 4 種常見方法"
 
-keywords: [Vue3, Props, provide/inject, Pinia]
+keywords: [vue3, Props, provide/inject, Pinia]
 
 description: Vue 3 中如何將 Props 從父元件傳遞到孫元件，並介紹 4 種不同的方式來處理這個需求。
 
 author: WeiYun0912
 
-og:title: "[Vue] Vue 3 父元件傳遞 Props 到孫元件的 4 種常見方法"
+og:title: "[vue] Vue 3 父元件傳遞 Props 到孫元件的 4 種常見方法"
 
 og:description: "Vue 3 中如何將 Props 從父元件傳遞到孫元件，並介紹 4 種不同的方式來處理這個需求。"
 ---

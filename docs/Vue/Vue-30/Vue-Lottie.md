@@ -101,7 +101,8 @@ createApp(App).use(Vue3Lottie).mount("#app");
 
 在 `App.vue` 中使用 `Lottie` 元件，並且傳入動畫的 JSON 資料。
 
-```javascript
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import loadingData from "./assets/lottie/loading.json"; // 你的 Lottie JSON 檔案
 </script>
@@ -117,7 +118,8 @@ import loadingData from "./assets/lottie/loading.json"; // 你的 Lottie JSON �
 
 我們可以透過 `Lottie` 元件的 `play`、`pause`、`stop` 等方法來控制動畫的播放、暫停、停止等操作。
 
-```javascript
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { ref } from "vue";
 import loadingData from "./assets/lottie/loading.json";
