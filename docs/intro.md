@@ -41,6 +41,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+-   2025-03-10：新增 <Link to="/docs/Vue/Vue-30/Vue-ImagePreview">Vue 使用 vue-easy-lightbox 預覽圖片</Link> 文章。
 -   2025-03-09：新增 <Link to="/docs/Vue/Vue-30/Vue-Lottie">Vue 使用 Lottie 動畫</Link> 文章。
 -   2025-03-08：新增 <Link to="/docs/Vue/Vue-30/Vue-Use">VueUse 介紹</Link> 文章。
 -   2025-03-07：新增 <Link to="/docs/Vue/Vue-30/Vue-Mitt">Vue 使用 mitt 進行跨元件溝通</Link> 文章。
