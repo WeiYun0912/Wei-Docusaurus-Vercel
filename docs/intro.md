@@ -41,6 +41,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+-   2025-03-12：新增 <Link to="/docs/Vue/Vue-30/Vue-Key-index">Vue 3 使用 index 當 key 的問題</Link> 文章。
 -   2025-03-11：新增 <Link to="/docs/Vue/Vue-30/Vue-URL-State">Vue 將 State 放入 URL 的好處與實作方式</Link> 文章。
 -   2025-03-10：新增 <Link to="/docs/Vue/Vue-30/Vue-ImagePreview">Vue 使用 vue-easy-lightbox 預覽圖片</Link> 文章。
 -   2025-03-09：新增 <Link to="/docs/Vue/Vue-30/Vue-Lottie">Vue 使用 Lottie 動畫</Link> 文章。
