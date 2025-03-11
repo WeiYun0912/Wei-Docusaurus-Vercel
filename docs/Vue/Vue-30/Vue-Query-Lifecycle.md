@@ -30,7 +30,7 @@ sidebar_position: 3
 
 | 狀態         | 說明                                                                   |
 | ------------ | ---------------------------------------------------------------------- |
-| **Fresh**    | 資料是新鮮的，不需要重新請求。                                         |
+| **Fresh**    | 資料是新鮮的，不需要重新請求，除非手動 `refetch`。                     |
 | **Fetching** | 正在發送 API 請求並取得資料。                                          |
 | **Stale**    | 資料變成「不新鮮」，但仍可使用快取。                                   |
 | **Paused**   | 因為網路問題，請求暫停。                                               |
@@ -65,12 +65,12 @@ import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
 
 ![Image](https://i.imgur.com/c3SNwQu.png)
 
-## Stale (不新鮮的資料)
+## 設定資料生命週期
 
 當你使用 `useQuery` 取得 API 資料時，預設 **所有資料都會是 Stale**，這代表：
 
 -   當 **元件重新載入(Unmount -> Mount)**，Vue Query 就會去重新請求資料。
--   當 **頁面重新聚焦(切到其他頁面再切回來)**，Vue Query 就會去重新請求資料。
+-   當 **頁面重新聚焦(切到其他頁面再切回來 refetchOnWindowFocus)**，Vue Query 就會去重新請求資料。
 
 ### 設定 staleTime
 
@@ -135,5 +135,44 @@ const {
     queryFn: fetchTodos,
     staleTime: 3000,
     refetchOnWindowFocus: false // 調成 false 後，切分頁後，再次切回來就不會發 request 了。
+});
+```
+
+### 永不過期
+
+如果想要資料永遠都保持 `Fresh` 狀態，可以將 `staleTime` 設定為 `Infinity`。
+
+<!-- prettier-ignore -->
+```js title='App.vue' showLineNumbers
+const {
+    data: todos,
+    isLoading,
+    isError,
+} = useQuery({
+    queryKey: ["todos"],
+    queryFn: fetchTodos,
+    staleTime: Infinity,
+});
+```
+
+這樣設定後，資料的狀態會是 `Fetching` -> `Fresh`(永久不過期)，所以就不會觸發重新請求資料，除非我們手動去 `refetch`，關於 `refetch` 的用法下一篇會介紹。
+
+會將資料設定為永久不過期，是因為我們知道資料不會變動，所以不需要重新請求資料，這樣可以避免不必要的請求，提升效能。
+
+### 設定 gcTime (garbage collection)
+
+我們可以設定 `gcTime` 來決定資料多久會進入回收機制，預設是 5 分鐘，這邊我們設定 5 秒，然後將 component unmount 後，會先看到資料變成 `Inactive`，然後 5 秒後資料就會被回收，也就不會在 panel 中看到資料。
+
+<!-- prettier-ignore -->
+```js title='App.vue' showLineNumbers
+const {
+    data: todos,
+    isLoading,
+    isError,
+} = useQuery({
+    queryKey: ["todos"],
+    queryFn: fetchTodos,
+    staleTime: Infinity,
+    gcTime: 5000,
 });
 ```
