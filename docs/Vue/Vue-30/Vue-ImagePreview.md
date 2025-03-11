@@ -7,14 +7,14 @@ description: "使用 vue-easy-lightbox 實現圖片預覽，支援放大、縮�
 
 author: WeiYun0912
 
-og:title: "[Vue] 使用 vue-easy-lightbox 實現圖片預覽"
+og:title: "[vue] 使用 vue-easy-lightbox 實現圖片預覽"
 
 og:description: "使用 vue-easy-lightbox 實現圖片預覽，支援放大、縮小、旋轉、恢復原始大小，也可以左右切換圖片。"
 ---
 
 # 使用 vue-easy-lightbox 實現圖片預覽
 
-## 前言
+## 簡介
 
 在 Vue 3 應用中，我們可能需要預覽不同類型的圖檔，例如：
 
