@@ -67,7 +67,7 @@ import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
 
 ## 設定資料生命週期
 
-當你使用 `useQuery` 取得 API 資料時，預設 **所有資料都會是 Stale**，這代表：
+當你使用 `useQuery` 取得 API 資料時，預設 **所有資料都會是 Stale**，而在 Vue Query 中，不新鮮的資料(Stale) 會在以下情況下被重新請求：
 
 -   當 **元件重新載入(Unmount -> Mount)**，Vue Query 就會去重新請求資料。
 -   當 **頁面重新聚焦(切到其他頁面再切回來 refetchOnWindowFocus)**，Vue Query 就會去重新請求資料。
@@ -155,16 +155,27 @@ const {
 });
 ```
 
-這樣設定後，資料的狀態會是 `Fetching` -> `Fresh`(永久不過期)，所以就不會觸發重新請求資料，除非我們手動去 `refetch`，關於 `refetch` 的用法下一篇會介紹。
+這樣設定後，資料的狀態會是 `Fetching` -> `Fresh`(永久不過期)，所以就不會觸發重新請求資料，除非我們手動去 `refetch`。
 
 會將資料設定為永久不過期，是因為我們知道資料不會變動，所以不需要重新請求資料，這樣可以避免不必要的請求，提升效能。
 
 ### 設定 gcTime (garbage collection)
 
-我們可以設定 `gcTime` 來決定資料多久會進入回收機制，預設是 5 分鐘，這邊我們設定 5 秒，然後將 component unmount 後，會先看到資料變成 `Inactive`，然後 5 秒後資料就會被回收，也就不會在 panel 中看到資料。
+我們可以設定 `gcTime` 來決定資料多久會進入回收機制，預設是 5 分鐘，這邊我們設定 5 秒，然後將 `component unmount` 後，會先看到資料變成 `Inactive`，然後 5 秒後資料就會被回收，也就不會在 panel 中看到資料。
+
+為了讓大家看到效果，我們需要額外建立一個 `Todos.vue` 元件，並在 `App.vue` 中引入它，所以程式碼改成這樣。
 
 <!-- prettier-ignore -->
-```js title='App.vue' showLineNumbers
+```html title='Todos.vue' showLineNumbers
+<script setup>
+import { useQuery } from "@tanstack/vue-query";
+import axios from "axios";
+
+const fetchTodos = async () => {
+    const { data } = await axios.get("https://jsonplaceholder.typicode.com/todos?_limit=5");
+    return data;
+};
+
 const {
     data: todos,
     isLoading,
@@ -172,7 +183,43 @@ const {
 } = useQuery({
     queryKey: ["todos"],
     queryFn: fetchTodos,
-    staleTime: Infinity,
     gcTime: 5000,
 });
+</script>
+
+<template>
+    <div>
+        <p v-if="isLoading">載入中...</p>
+        <p v-else-if="isError">取得資料失敗</p>
+        <ul v-else>
+            <li v-for="todo in todos" :key="todo.id">{{ todo.title }}</li>
+        </ul>
+    </div>
+</template>
 ```
+
+然後在 `App.vue` 的 `template` 中加入一個按鈕，點擊按鈕後，會切換 `Todos.vue` 元件是否顯示。
+
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
+<script setup>
+import { VueQueryDevtools } from "@tanstack/vue-query-devtools";
+import { ref } from "vue";
+import Todos from "./components/Todos.vue";
+const toggle = ref(false);
+
+const handleToggle = () => {
+    toggle.value = !toggle.value;
+};
+</script>
+
+<template>
+    <button @click="handleToggle">Toggle</button>
+    <Todos v-if="toggle" />
+    <VueQueryDevtools />
+</template>
+```
+
+當元件 `unmount` 的時候，就會看到資料變成 `Inactive`，然後 5 秒後資料就會被回收，也就不會在 panel 中看到資料。
+
+![Image](https://i.imgur.com/91tpeVf.png)

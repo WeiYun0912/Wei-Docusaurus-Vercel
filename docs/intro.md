@@ -41,6 +41,7 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+-   2025-03-16：新增 <Link to="/docs/Vue/Vue-30/Vue-Query-Use-Mutation">Vue Query 介紹： 使用 useMutation 來發送 API 請求</Link> 文章。
 -   2025-03-15：新增 <Link to="/docs/Vue/Vue-30/Vue-Query-Lifecycle">Vue Query 介紹： 資料生命週期介紹</Link> 文章。
 -   2025-03-14：新增 <Link to="/docs/Vue/Vue-30/Vue-Use-Query">Vue Query 介紹： 使用 useQuery 來管理 API 資料</Link> 文章。
 -   2025-03-13：新增 <Link to="/docs/Vue/Vue-30/Vue-Query-Intro">Vue Query 介紹： 讓 API 資料管理更簡單方便</Link> 文章。
