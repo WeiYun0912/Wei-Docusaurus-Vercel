@@ -1,5 +1,5 @@
 ---
-title: "[vue] Vue Query 使用 useMutation 來發送 API 請求"
+title: "[vue] Vue Query 介紹： 使用 useMutation 來發送 API 請求"
 
 keywords: [Vue3, tanstack, useMutation, API 更新, 非同步請求]
 
@@ -7,7 +7,7 @@ description: "useMutation 是 Vue Query 提供的 Hook，可用來處理非同�
 
 author: WeiYun0912
 
-og:title: "[vue] Vue Query 使用 useMutation 來發送 API 請求"
+og:title: "[vue] Vue Query 介紹： 使用 useMutation 來發送 API 請求"
 
 og:description: "useMutation 是 Vue Query 提供的 Hook，可用來處理非同步 API 變更，例如新增、更新與刪除"
 
@@ -64,7 +64,7 @@ sidebar_position: 4
 顯示資料一樣用上一篇的 `Todos.vue`，這邊就不重複了，只是把 API 改成 `json-server` 的 API。
 
 <!-- prettier-ignore -->
-```html title='Todos.vue' showLineNumbers
+```html
 <script setup>
 import { useQuery } from "@tanstack/vue-query";
 import axios from "axios";
@@ -106,7 +106,7 @@ const {
 在請求發出去的時候，會進入到 `isPending` 狀態，請求成功後，會進入到 `isSuccess` 狀態，請求失敗後，會進入到 `isError` 狀態。
 
 <!-- prettier-ignore -->
-```html title='CreateTodo.vue' showLineNumbers
+```html
 <script setup>
 import { useMutation } from "@tanstack/vue-query";
 import axios from "axios";
@@ -139,7 +139,7 @@ const handleCreateTodo = () => {
 ```
 
 <!-- prettier-ignore -->
-```html title='App.vue' showLineNumbers
+```html
 <script setup>
 import { VueQueryDevtools } from "@tanstack/vue-query-devtools";
 import Todos from "./components/Todos.vue";
@@ -162,7 +162,7 @@ import AddTodo from "./components/CreateTodo.vue";
 在 `invalidateQueries` 中，我們需要傳入 `queryKey`，這個 `queryKey` 就是我們在 `useQuery` 中設定的 `queryKey`，這樣就可以讓 `Todos.vue` 中的資料即時更新。
 
 <!-- prettier-ignore -->
-```html title='CreateTodo.vue' showLineNumbers
+```html
 <script setup>
 import { useMutation, useQueryClient } from "@tanstack/vue-query";
 import axios from "axios";
@@ -205,7 +205,7 @@ const handleCreateTodo = () => {
 順便補充一下，如果我們在同一個元件中，想要重新請求資料，可以透過 `useQuery` 的 `refetch` 來重新請求資料。
 
 <!-- prettier-ignore -->
-```html title='Todos.vue' showLineNumbers
+```html
 <script setup>
 import { useQuery } from "@tanstack/vue-query";
 import axios from "axios";
@@ -257,7 +257,7 @@ const handleRefetch = () => {
 | 適合場景                     | 簡單的事件處理，例如按鈕點擊後發送請求 | 需要等待 API 完成後執行後續邏輯           |
 
 <!-- prettier-ignore -->
-```html title='CreateTodo.vue' showLineNumbers
+```html
 <script setup>
 import { useMutation } from '@tanstack/vue-query'
 import axios from 'axios'
@@ -305,3 +305,7 @@ const handleAddTodoWithMutateAsync = async () => {
   </div>
 </template>
 ```
+
+## 參考資料
+
+-   [Vue Query 官方文件](https://tanstack.com/query/latest/docs/framework/vue/reference/useMutation)

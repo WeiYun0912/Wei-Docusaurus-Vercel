@@ -98,3 +98,7 @@ const { data: todos, isLoading, isError } = useQuery({
 -   `queryKey` 是這個查詢的識別符，Vue Query 會根據它來決定是否快取或重新請求。
 -   `isLoading`、`isError` 讓我們輕鬆管理 UI 狀態。
 -   `data` 會自動更新，不需要手動 ref() 來存資料。
+
+## 參考資料
+
+-   [Vue Query 官方文件](https://tanstack.com/query/latest/docs/framework/vue/overview)

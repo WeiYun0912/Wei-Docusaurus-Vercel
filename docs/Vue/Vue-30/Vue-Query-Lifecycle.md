@@ -1,5 +1,5 @@
 ---
-title: "[vue] Vue Query 資料生命週期介紹"
+title: "[vue] Vue Query 介紹： Vue Query 資料生命週期介紹"
 
 keywords: [Vue3, tanstack, useQuery]
 
@@ -7,7 +7,7 @@ description: "Vue Query 資料生命週期介紹(stale,fresh,paused,inActive)"
 
 author: WeiYun0912
 
-og:title: "[vue] Vue Query 資料生命週期介紹"
+og:title: "[vue] Vue Query 介紹： Vue Query 資料生命週期介紹"
 
 og:description: "Vue Query 資料生命週期介紹(stale,fresh,paused,inActive)"
 
@@ -49,7 +49,7 @@ npm install @tanstack/vue-query-devtools
 安裝完之後，我們需要在 `App.vue` 中引入 `VueQueryDevtools` 並在 `template` 中渲染。
 
 <!-- prettier-ignore -->
-```html title='App.vue' showLineNumbers
+```html
 <script setup>
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
 </script>
@@ -77,7 +77,7 @@ import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
 而我們可以設定 `staleTime` 來決定資料多久會從 `Fresh` 變成 `Stale`，預設是 0 秒，也就是資料一取得就會變成 `Stale`，這邊我們設定 3 秒。
 
 <!-- prettier-ignore -->
-```html title='App.vue' showLineNumbers
+```html
 <script setup>
 import { VueQueryDevtools } from "@tanstack/vue-query-devtools";
 import { useQuery } from "@tanstack/vue-query";
@@ -125,7 +125,7 @@ const {
 我們可以設定 `refetchOnWindowFocus` 來決定當頁面重新聚焦時，是否要重新請求資料，預設是開啟的。
 
 <!-- prettier-ignore -->
-```js title='App.vue' showLineNumbers
+```js
 const {
     data: todos,
     isLoading,
@@ -143,7 +143,7 @@ const {
 如果想要資料永遠都保持 `Fresh` 狀態，可以將 `staleTime` 設定為 `Infinity`。
 
 <!-- prettier-ignore -->
-```js title='App.vue' showLineNumbers
+```js
 const {
     data: todos,
     isLoading,
@@ -166,7 +166,7 @@ const {
 為了讓大家看到效果，我們需要額外建立一個 `Todos.vue` 元件，並在 `App.vue` 中引入它，所以程式碼改成這樣。
 
 <!-- prettier-ignore -->
-```html title='Todos.vue' showLineNumbers
+```html
 <script setup>
 import { useQuery } from "@tanstack/vue-query";
 import axios from "axios";
@@ -201,7 +201,7 @@ const {
 然後在 `App.vue` 的 `template` 中加入一個按鈕，點擊按鈕後，會切換 `Todos.vue` 元件是否顯示。
 
 <!-- prettier-ignore -->
-```html title='App.vue' showLineNumbers
+```html
 <script setup>
 import { VueQueryDevtools } from "@tanstack/vue-query-devtools";
 import { ref } from "vue";
@@ -223,3 +223,7 @@ const handleToggle = () => {
 當元件 `unmount` 的時候，就會看到資料變成 `Inactive`，然後 5 秒後資料就會被回收，也就不會在 panel 中看到資料。
 
 ![Image](https://i.imgur.com/91tpeVf.png)
+
+## 參考資料
+
+-   [Vue Query 官方文件](https://tanstack.com/query/v4/docs/framework/vue/guides/important-defaults)
