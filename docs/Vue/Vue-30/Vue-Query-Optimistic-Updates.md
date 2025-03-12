@@ -64,13 +64,13 @@ npx json-server --watch db.json --port 3002
 
 ## Mutation 與 Query 在同元件
 
-如果我們的 Mutation 和 Query 都在同個元件的話，可以讓 UI 直接渲染 isPending 或 isError 來反應變更。
+如果我們的 `Mutation` 和 `Query` 都在同個元件的話，可以讓 UI 直接渲染 `isPending` 或 `isError` 來反應變更。
 
 以下程式碼的說明：
 
--   新增時 UI 立即顯示一筆新的項目 (opacity 0.5)，等 API 回應後變為正式資料，這邊透過 isPending 來判斷是否顯示。
--   Mutation 失敗時 UI 自動刪除該項目，並提供「重試」按鈕。
--   適用於單一元件內部處理 Mutation 與 Query。
+-   新增時 UI 立即顯示一筆新的項目 (opacity 0.5)，等 API 回應後變為正式資料，這邊透過 `isPending` 來判斷是否顯示。
+-   `Mutation` 失敗時 UI 自動刪除該項目，並提供「重試」按鈕。
+-   適用於單一元件內部處理 `Mutation` 與 `Query`。
 
 <!-- prettier-ignore -->
 ```html title='App.vue' showLineNumbers
