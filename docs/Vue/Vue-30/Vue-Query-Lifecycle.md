@@ -49,7 +49,7 @@ npm install @tanstack/vue-query-devtools
 安裝完之後，我們需要在 `App.vue` 中引入 `VueQueryDevtools` 並在 `template` 中渲染。
 
 <!-- prettier-ignore -->
-```html
+```html title="App.vue" showLineNumbers
 <script setup>
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
 </script>
@@ -77,7 +77,7 @@ import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
 而我們可以設定 `staleTime` 來決定資料多久會從 `Fresh` 變成 `Stale`，預設是 0 秒，也就是資料一取得就會變成 `Stale`，這邊我們設定 3 秒。
 
 <!-- prettier-ignore -->
-```html
+```html title="App.vue" showLineNumbers
 <script setup>
 import { VueQueryDevtools } from "@tanstack/vue-query-devtools";
 import { useQuery } from "@tanstack/vue-query";
@@ -166,7 +166,7 @@ const {
 為了讓大家看到效果，我們需要額外建立一個 `Todos.vue` 元件，並在 `App.vue` 中引入它，所以程式碼改成這樣。
 
 <!-- prettier-ignore -->
-```html
+```html title="Todos.vue" showLineNumbers
 <script setup>
 import { useQuery } from "@tanstack/vue-query";
 import axios from "axios";
@@ -201,7 +201,7 @@ const {
 然後在 `App.vue` 的 `template` 中加入一個按鈕，點擊按鈕後，會切換 `Todos.vue` 元件是否顯示。
 
 <!-- prettier-ignore -->
-```html
+```html title="App.vue" showLineNumbers
 <script setup>
 import { VueQueryDevtools } from "@tanstack/vue-query-devtools";
 import { ref } from "vue";
