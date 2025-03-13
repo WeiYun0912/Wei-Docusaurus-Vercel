@@ -1,15 +1,15 @@
 ---
 title: "[vue] 使用 KeepAlive 讓元件保持狀態，避免重置"
 
-keywords: [vue3, KeepAlive, 動態組件, 緩存元件, Vue Router]
+keywords: [vue3, KeepAlive, 動態元件, 緩存元件, Vue Router]
 
-description: KeepAlive 是 Vue 內建的組件，可以緩存動態元件，避免組件切換時重新渲染。本篇介紹 KeepAlive 的使用方式、適用場景、與常見問題。
+description: KeepAlive 是 Vue 內建的元件，可以緩存動態元件，避免元件切換時重新渲染。本篇介紹 KeepAlive 的使用方式、適用場景、與常見問題。
 
 author: WeiYun0912
 
 og:title: "[vue] 使用 KeepAlive 讓元件保持狀態，避免重置"
 
-og:description: "[vue] KeepAlive 是 Vue 內建的組件，可以緩存動態元件，避免組件切換時重新渲染。本篇介紹 KeepAlive 的使用方式、適用場景、與常見問題。"
+og:description: "[vue] KeepAlive 是 Vue 內建的元件，可以緩存動態元件，避免元件切換時重新渲染。本篇介紹 KeepAlive 的使用方式、適用場景、與常見問題。"
 ---
 
 # Vue KeepAlive
@@ -148,7 +148,7 @@ const toggleTab = () => {
 
 這時候會發現為什麼 `toggleTab` 按下去以後，沒有切換元件，這是因為使用 `ref` 包裝 Vue 元件時，它會嘗試使元件變成響應式，但 Vue 元件本身是複雜物件，內部包含各種方法和屬性，不適合被完全轉換為響應式。
 
-所以這時候我們可以改使用 `shallowRef`，因為它只會使頂層（即 .value 屬性）變成響應式，而不會嘗試深入轉換組件內部的結構。這對於元件引用特別適合，因為我們只需要追蹤元件的引用變化，而不需要追蹤元件 `內部結構`的變化。
+所以這時候我們可以改使用 `shallowRef`，因為它只會使頂層（即 .value 屬性）變成響應式，而不會嘗試深入轉換元件內部的結構。這對於元件引用特別適合，因為我們只需要追蹤元件的引用變化，而不需要追蹤元件 `內部結構`的變化。
 
 <!-- prettier-ignore -->
 ```html

@@ -44,22 +44,22 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
 const store = configureStore({
-  reducer: {},
+    reducer: {},
 });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
+    <React.StrictMode>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById("root")
 );
 ```
 
 我們首先利用 **configureStore** 來建立 **store** ，而 **store** 內的**reducer**就是我們管理 **state** 的 **function** ，這部份待會再來做定義。
 
-跟以往一樣，我們需要一個 **redux** 的 **Provider** 來將 **store** 傳遞到子組件。
+跟以往一樣，我們需要一個 **redux** 的 **Provider** 來將 **store** 傳遞到子元件。
 
 ## 建立 reducer
 
@@ -69,31 +69,31 @@ ReactDOM.render(
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  profile: {
-    name: "",
-    age: 0,
-    email: "",
-    login: false,
-  },
+    profile: {
+        name: "",
+        age: 0,
+        email: "",
+        login: false,
+    },
 };
 
 const userSlice = createSlice({
-  name: "user",
-  initialState: initialState,
-  reducers: {
-    setLogin(state, action) {
-      const { name, age, email } = action.payload;
-      state.value = {
-        name,
-        age,
-        email,
-        isLogin: true,
-      };
+    name: "user",
+    initialState: initialState,
+    reducers: {
+        setLogin(state, action) {
+            const { name, age, email } = action.payload;
+            state.value = {
+                name,
+                age,
+                email,
+                isLogin: true,
+            };
+        },
+        setLogout(state, action) {
+            state.value = initialState;
+        },
     },
-    setLogout(state, action) {
-      state.value = initialState;
-    },
-  },
 });
 
 export const { setLogin, setLogout } = userSlice.actions;
@@ -103,15 +103,15 @@ export default userSlice.reducer;
 
 這邊有幾個部分要介紹
 
-- name:這個 Slice 的名稱，建議取跟檔名有關係的。
+-   name:這個 Slice 的名稱，建議取跟檔名有關係的。
 
-- initialState :初始化的 state，在該部分需要定義初始的 state，如程式碼 3~9 行。
+-   initialState :初始化的 state，在該部分需要定義初始的 state，如程式碼 3~9 行。
 
-- reducers :最重要的部分，在裡面我們可以定義改變 state 的 function，而 function 內預設會帶入兩個參數，分別是 **state** 和 **action** 。
+-   reducers :最重要的部分，在裡面我們可以定義改變 state 的 function，而 function 內預設會帶入兩個參數，分別是 **state** 和 **action** 。
 
-- state:state 為我們在 initialState 內定義的變數，我們可以直接透過物件訪問的方式來修改 state，像是 **state.name="wei"** 。
+-   state:state 為我們在 initialState 內定義的變數，我們可以直接透過物件訪問的方式來修改 state，像是 **state.name="wei"** 。
 
-- action:如果有外部參數傳進來的話，我們可以利用 action 來取得，在 action 物件裡面還會有個 payload，所以記得取得**外部參數**的時候要使用**action.payload**，也可以使用**解構**的方式。
+-   action:如果有外部參數傳進來的話，我們可以利用 action 來取得，在 action 物件裡面還會有個 payload，所以記得取得**外部參數**的時候要使用**action.payload**，也可以使用**解構**的方式。
 
 建立完以後，在 **index.js** 的部分要改成以下：
 
@@ -124,18 +124,18 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import userSlice from "./reducers/userSlice";
 const store = configureStore({
-  reducer: {
-    user: userSlice,
-  },
+    reducer: {
+        user: userSlice,
+    },
 });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
+    <React.StrictMode>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById("root")
 );
 ```
 
@@ -152,13 +152,13 @@ import React from "react";
 import Login from "./Login";
 import NotLogin from "./NotLogin";
 const Profile = () => {
-  return (
-    <div>
-      <h1>Profile Info</h1>
-      <Login />
-      <NotLogin />
-    </div>
-  );
+    return (
+        <div>
+            <h1>Profile Info</h1>
+            <Login />
+            <NotLogin />
+        </div>
+    );
 };
 
 export default Profile;
@@ -170,15 +170,15 @@ export default Profile;
 import React from "react";
 
 const Login = () => {
-  const handleLogout = () => {};
-  return (
-    <div>
-      <p>Name:</p>
-      <p>Age:</p>
-      <p>Email:</p>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
-  );
+    const handleLogout = () => {};
+    return (
+        <div>
+            <p>Name:</p>
+            <p>Age:</p>
+            <p>Email:</p>
+            <button onClick={handleLogout}>Logout</button>
+        </div>
+    );
 };
 
 export default Login;
@@ -189,21 +189,21 @@ export default Login;
 ```javascript title="NotLogin.js" showLineNumbers
 import React from "react";
 const NotLogin = () => {
-  const handleLogin = () => {};
-  return (
-    <div>
-      <label htmlFor="name">Name:</label>
-      <input type="text" placeholder="name" name="name" id="name" />
-      <br />
-      <label htmlFor="age">Age:</label>
-      <input type="text" placeholder="age" name="age" id="age" />
-      <br />
-      <label htmlFor="email">Email:</label>
-      <input type="text" placeholder="email" name="email" id="email" />
-      <br />
-      <button onClick={handleLogin}>Login</button>
-    </div>
-  );
+    const handleLogin = () => {};
+    return (
+        <div>
+            <label htmlFor="name">Name:</label>
+            <input type="text" placeholder="name" name="name" id="name" />
+            <br />
+            <label htmlFor="age">Age:</label>
+            <input type="text" placeholder="age" name="age" id="age" />
+            <br />
+            <label htmlFor="email">Email:</label>
+            <input type="text" placeholder="email" name="email" id="email" />
+            <br />
+            <button onClick={handleLogin}>Login</button>
+        </div>
+    );
 };
 
 export default NotLogin;
@@ -221,13 +221,13 @@ import { useSelector } from "react-redux";
 import Login from "./Login";
 import NotLogin from "./NotLogin";
 const Profile = () => {
-  const state = useSelector((state) => state.user);
-  return (
-    <div>
-      <h1>Profile Info</h1>
-      {state.isLogin ? <Login /> : <NotLogin />}
-    </div>
-  );
+    const state = useSelector((state) => state.user);
+    return (
+        <div>
+            <h1>Profile Info</h1>
+            {state.isLogin ? <Login /> : <NotLogin />}
+        </div>
+    );
 };
 
 export default Profile;
@@ -246,42 +246,30 @@ import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { setLogin } from "../reducers/userSlice";
 const NotLogin = () => {
-  const dispatch = useDispatch();
-  const nameRef = useRef();
-  const ageRef = useRef();
-  const emailRef = useRef();
-  const handleLogin = () => {
-    const nameValue = nameRef.current.value;
-    const ageValue = ageRef.current.value;
-    const emailValue = emailRef.current.value;
-    dispatch(setLogin({ name: nameValue, age: ageValue, email: emailValue }));
-  };
-  return (
-    <div>
-      <label htmlFor="name">Name:</label>
-      <input
-        type="text"
-        placeholder="name"
-        name="name"
-        id="name"
-        ref={nameRef}
-      />
-      <br />
-      <label htmlFor="age">Age:</label>
-      <input type="text" placeholder="age" name="age" id="age" ref={ageRef} />
-      <br />
-      <label htmlFor="email">Email:</label>
-      <input
-        type="text"
-        placeholder="email"
-        name="email"
-        id="email"
-        ref={emailRef}
-      />
-      <br />
-      <button onClick={handleLogin}>Login</button>
-    </div>
-  );
+    const dispatch = useDispatch();
+    const nameRef = useRef();
+    const ageRef = useRef();
+    const emailRef = useRef();
+    const handleLogin = () => {
+        const nameValue = nameRef.current.value;
+        const ageValue = ageRef.current.value;
+        const emailValue = emailRef.current.value;
+        dispatch(setLogin({ name: nameValue, age: ageValue, email: emailValue }));
+    };
+    return (
+        <div>
+            <label htmlFor="name">Name:</label>
+            <input type="text" placeholder="name" name="name" id="name" ref={nameRef} />
+            <br />
+            <label htmlFor="age">Age:</label>
+            <input type="text" placeholder="age" name="age" id="age" ref={ageRef} />
+            <br />
+            <label htmlFor="email">Email:</label>
+            <input type="text" placeholder="email" name="email" id="email" ref={emailRef} />
+            <br />
+            <button onClick={handleLogin}>Login</button>
+        </div>
+    );
 };
 
 export default NotLogin;
@@ -294,19 +282,19 @@ import { useSelector } from "react-redux";
 import { setLogout } from "../reducers/userSlice";
 
 const Login = () => {
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state.user);
-  const handleLogout = () => {
-    dispatch(setLogout());
-  };
-  return (
-    <div>
-      <p>Name:{state.name}</p>
-      <p>Age:{state.age}</p>
-      <p>Email:{state.email}</p>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
-  );
+    const dispatch = useDispatch();
+    const state = useSelector((state) => state.user);
+    const handleLogout = () => {
+        dispatch(setLogout());
+    };
+    return (
+        <div>
+            <p>Name:{state.name}</p>
+            <p>Age:{state.age}</p>
+            <p>Email:{state.email}</p>
+            <button onClick={handleLogout}>Logout</button>
+        </div>
+    );
 };
 
 export default Login;
@@ -324,38 +312,38 @@ API 網址：https://randomuser.me/api/
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user: {},
+    user: {},
 };
 
 const userSlice = createSlice({
-  name: "user",
-  initialState,
-  reducers: {
-    setUserProfile(state, action) {
-      state.user = action.payload.results[0];
+    name: "user",
+    initialState,
+    reducers: {
+        setUserProfile(state, action) {
+            state.user = action.payload.results[0];
+        },
     },
-  },
 });
 
 //因為reducers內不能使用非同步 所以必須建立自己的action並dispatch資料進去
 export const fetchUserProfile = () => {
-  return async (dispatch) => {
-    const fetchData = async () => {
-      const response = await fetch("https://randomuser.me/api/");
+    return async (dispatch) => {
+        const fetchData = async () => {
+            const response = await fetch("https://randomuser.me/api/");
 
-      if (!response.ok) {
-        throw new Error("Fetch Fail!!!");
-      }
+            if (!response.ok) {
+                throw new Error("Fetch Fail!!!");
+            }
 
-      const data = await response.json();
-      return data;
+            const data = await response.json();
+            return data;
+        };
+
+        try {
+            const userData = await fetchData();
+            dispatch(userAction.setUserProfile(userData));
+        } catch (error) {}
     };
-
-    try {
-      const userData = await fetchData();
-      dispatch(userAction.setUserProfile(userData));
-    } catch (error) {}
-  };
 };
 
 export const userAction = userSlice.actions;
@@ -373,16 +361,16 @@ import Profile from "./component/Profile";
 import { fetchUserProfile } from "./store/user/userSlice";
 
 function App() {
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchUserProfile());
-  }, [dispatch]);
-  return (
-    <div className="App">
-      <Profile />
-    </div>
-  );
+    useEffect(() => {
+        dispatch(fetchUserProfile());
+    }, [dispatch]);
+    return (
+        <div className="App">
+            <Profile />
+        </div>
+    );
 }
 
 export default App;
@@ -393,20 +381,20 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const Profile = () => {
-  const user = useSelector((state) => state.user.user);
-  const UserProfile = () => (
-    <>
-      <p>name : {user.name.first}</p>
-      <p>gender : {user.gender}</p>
-      <p>phone : {user.phone}</p>
-    </>
-  );
-  return (
-    <div>
-      <h1>User Profile</h1>
-      {user?.name ? <UserProfile /> : null}
-    </div>
-  );
+    const user = useSelector((state) => state.user.user);
+    const UserProfile = () => (
+        <>
+            <p>name : {user.name.first}</p>
+            <p>gender : {user.gender}</p>
+            <p>phone : {user.phone}</p>
+        </>
+    );
+    return (
+        <div>
+            <h1>User Profile</h1>
+            {user?.name ? <UserProfile /> : null}
+        </div>
+    );
 };
 
 export default Profile;

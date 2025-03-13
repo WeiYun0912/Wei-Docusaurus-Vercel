@@ -20,19 +20,19 @@ og:description: Vue 自訂語法 Directive 用法
 
 這樣做的優點有以下：
 
-- 操作 DOM 元素：直接訪問和操作 DOM 元素
-- 抽離邏輯：在多個組件中重複使用相同的 DOM 操作邏輯。
-- 優化現有元件：為現有的組件新增額外的功能，而不需要修改元件本身。
+-   操作 DOM 元素：直接訪問和操作 DOM 元素
+-   抽離邏輯：在多個元件中重複使用相同的 DOM 操作邏輯。
+-   優化現有元件：為現有的元件新增額外的功能，而不需要修改元件本身。
 
 我們可以在 directive 裡面使用以下幾種生命週期的方法
 
-- created
-- beforeMount
-- mounted
-- beforeUpdate
-- updated
-- beforeUnmount
-- unmounted
+-   created
+-   beforeMount
+-   mounted
+-   beforeUpdate
+-   updated
+-   beforeUnmount
+-   unmounted
 
 ## focus
 
