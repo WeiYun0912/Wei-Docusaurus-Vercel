@@ -41,6 +41,8 @@ https://www.youtube.com/channel/UCy1Q33r6POsxGTtZcOF--Fw
 
 # Logs
 
+-   2025-03-26：新增 <Link to="/docs/Vue/Vue-30/Vue-Query-Parallel">Vue Query 介紹： 使用 Dependent Queries 與 Disabling Queries 來優化 API 查詢</Link> 文章。
+-   2025-03-25：新增 <Link to="/docs/Vue/Vue-30/Vue-Query-Parallel">Vue Query 介紹： 使用 Parallel Queries 來處理動態查詢</Link> 文章。
 -   2025-03-24：新增 <Link to="/docs/Vue/Vue-30/Vue-Query-Cancel-Query">Vue Query 介紹： 使用 cancelQuery 來取消請求</Link> 文章。
 -   2025-03-23：新增 <Link to="/docs/Vue/Vue-30/Vue-Query-Prefetching">Vue Query 介紹： 使用 prefetchQuery 來預先載入資料</Link> 文章。
 -   2025-03-22：新增 <Link to="/docs/Vue/Vue-30/Vue-Query-Optimistic-Updates">Vue Query 介紹： 使用 useMutation 進行樂觀更新 (Optimistic Updates)</Link> 文章。
