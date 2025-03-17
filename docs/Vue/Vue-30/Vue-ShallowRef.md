@@ -1,4 +1,18 @@
-# ** Vue 3 `shallowRef` vs `ref`：何時該用？如何提升效能？**
+---
+title: "[vue] Vue3 shallowRef 簡易介紹"
+
+keywords: [Vue3, shallowRef, 效能]
+
+description: "透過 Vue 3 的 shallowRef，提升效能"
+
+author: WeiYun0912
+
+og:title: "[vue] Vue3 shallowRef 簡易介紹"
+
+og:description: "透過 Vue 3 的 shallowRef，提升效能"
+---
+
+# ** Vue 3 shallowRef 簡易介紹**
 
 ## 簡介
 
