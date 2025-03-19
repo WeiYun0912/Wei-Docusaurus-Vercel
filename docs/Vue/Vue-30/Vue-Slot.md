@@ -5,6 +5,7 @@ description: 在 Vue 3 開發中，我們可以透過 Slot 來建立可複用的
 author: WeiYun0912
 og:title: "[vue] Vue Slot 基本介紹"
 og:description: "[vue] 在 Vue 3 開發中，我們可以透過 Slot 來建立可複用的元件，介紹一下 Slot 有幾種使用方式。"
+sidebar_position: 7
 ---
 
 # Vue Slot
