@@ -14,6 +14,8 @@ og:description: "useMutation 是 Vue Query 提供的 Hook，可用來處理非�
 sidebar_position: 24
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Query 使用 useMutation 來處理 API 變更
 
 不喜歡看字的可以看影片：
@@ -309,3 +311,5 @@ const handleAddTodoWithMutateAsync = async () => {
 ## 參考資料
 
 -   [Vue Query 官方文件](https://tanstack.com/query/latest/docs/framework/vue/reference/useMutation)
+
+<Giscus />

@@ -14,6 +14,8 @@ og:description: "透過 Vue Query 的 Dependent Queries 來處理依賴查詢，
 sidebar_position: 30
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # 使用 `Dependent Queries` 與 `Disabling Queries` 來優化 API 查詢
 
 不喜歡看字的可以看影片：
@@ -149,3 +151,5 @@ const { data } = useQuery({
 -   **`enabled` 讓我們可以靈活控制查詢執行時機**
 -   **`Disabling Queries` 適用於按鈕觸發或使用者輸入條件後的查詢**
 -   **透過 `Lazy Queries` 提升應用效能，減少不必要的請求**
+
+<Giscus />

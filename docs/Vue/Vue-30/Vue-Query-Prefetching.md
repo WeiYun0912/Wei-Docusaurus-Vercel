@@ -14,6 +14,8 @@ og:description: "透過 Vue Query 的 prefetchQuery，提前載入 API 資料，
 sidebar_position: 27
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # 使用 `prefetchQuery` 來預先載入資料
 
 不喜歡看字的可以看影片：
@@ -122,3 +124,5 @@ const { data: todos, isLoading } = useQuery({
 -   適合應用在滑鼠懸停 (hover) 或預測使用者行為來提前載入
 -   在分頁應用中，可以提前載入下一頁的內容，避免畫面閃爍
 -   可以設定適當的 `staleTime` 和 `gcTime` 來管理快取過期時間
+
+<Giscus />

@@ -14,6 +14,8 @@ og:description: "使用 vue-easy-lightbox 實現圖片預覽，支援放大、�
 sidebar_position: 16
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # 使用 vue-easy-lightbox 實現圖片預覽
 
 ## 簡介
@@ -134,3 +136,5 @@ button {
 ## 參考資料
 
 -   [vue-easy-lightbox](https://github.com/XiongAmao/vue-easy-lightbox)
+
+<Giscus />

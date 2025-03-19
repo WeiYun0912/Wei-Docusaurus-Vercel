@@ -14,6 +14,8 @@ og:description: "Vue 使用 mitt 進行跨元件溝通"
 sidebar_position: 13
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue 使用 mitt 進行跨元件溝通
 
 ## 簡介
@@ -135,3 +137,5 @@ const emitNotification = () => {
 ## 參考資料
 
 -   [mitt](https://github.com/developit/mitt)
+
+<Giscus />

@@ -14,6 +14,8 @@ og:description: "Vue 3.3  defineModel() 介紹"
 sidebar_position: 12
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue 3.3 defineModel() 介紹
 
 ## 簡介
@@ -138,3 +140,5 @@ const content = defineModel("content");
 | 支援多個 v-model | 直接使用 defineModel("name") | 需要手動 props 定義                |
 | 預設值           | defineModel({ default: 值 }) | 需要 props 設定 default            |
 | 適用場景         | 表單、輸入框、可編輯元件     | 自訂 v-model 邏輯的情境            |
+
+<Giscus />

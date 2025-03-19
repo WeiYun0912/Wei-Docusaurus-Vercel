@@ -14,6 +14,8 @@ og:description: "Vue 內建了一個 <transition> 元件，用於處理元素進
 sidebar_position: 9
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Transition 介紹
 
 ## 簡介
@@ -182,3 +184,5 @@ const leave = (el, done) => {
   </transition>
 </template>
 ```
+
+<Giscus />

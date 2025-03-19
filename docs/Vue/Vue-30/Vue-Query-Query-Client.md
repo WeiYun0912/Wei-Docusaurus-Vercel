@@ -14,6 +14,8 @@ og:description: "透過 Vue Query 的自訂 QueryClient，可靈活管理 API �
 sidebar_position: 22
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # 使用自訂 QueryClient 來管理快取與請求策略
 
 不喜歡看字的可以看影片：
@@ -97,3 +99,5 @@ const app = createApp(App);
 app.use(VueQueryPlugin, vueQueryPluginOptions);
 app.mount("#app");
 ```
+
+<Giscus />

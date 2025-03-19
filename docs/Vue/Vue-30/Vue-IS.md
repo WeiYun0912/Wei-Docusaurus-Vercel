@@ -14,6 +14,8 @@ og:description: "透過 Vue 的 :is 屬性，讓元件可以根據不同的需�
 sidebar_position: 6
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue `:is` 的常見用法
 
 ## **簡介**
@@ -130,3 +132,5 @@ const toggleTab = () => {
 -   `:is` 搭配 `<component>` 可用於 **動態顯示元件**，適合 **多種 UI 切換場景**。
 -   `keep-alive` 可與 `:is` 結合，讓 Vue **保留元件狀態**，提升效能。
 -   在某些情境下，`v-if`、`v-show` 也能達成類似效果，需根據需求選擇適當的解決方案。
+
+<Giscus />

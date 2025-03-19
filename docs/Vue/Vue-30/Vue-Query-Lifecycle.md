@@ -14,6 +14,8 @@ og:description: "Vue Query 資料生命週期介紹(stale,fresh,paused,inActive)
 sidebar_position: 23
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Query 資料生命週期介紹
 
 不喜歡看字的可以看影片：
@@ -227,3 +229,5 @@ const handleToggle = () => {
 ## 參考資料
 
 -   [Vue Query 官方文件](https://tanstack.com/query/v4/docs/framework/vue/guides/important-defaults)
+
+<Giscus />

@@ -14,6 +14,8 @@ og:description: "Vue Watch 和 WatchEffect"
 sidebar_position: 3
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Watch 和 WatchEffect
 
 ## watch
@@ -32,7 +34,8 @@ const stopWatch = watch(firstName, (newVal, oldVal) => {
 
 這兩種的 watch 的差別在於，reactive 預設是深層(deep)監聽且無法關閉深層監聽，ref 預設是淺層(shallow)監聽。
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { watch, ref, reactive } from "vue";
 
@@ -60,7 +63,8 @@ watch(person2, (newVal, oldVal) => {
 
 如果需要監聽物件的屬性，可以使用 `() => person.value.name` 來監聽。
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { reactive, watch } from 'vue'
 
@@ -82,7 +86,8 @@ watch(
 
 如果需要監聽多個響應式數據，可以在監聽的時候用陣列將多個響應式數據傳入，並在 callback 中使用 `newValues` 來取得多個響應式數據的值。
 
-```vue
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { watch, ref } from "vue";
 
@@ -102,7 +107,8 @@ watch([firstName, lastName], (newValues) => {
 
 watchEffect 會在初始化時執行一次，並在依賴的響應式數據變化時重新執行。
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { watchEffect, ref } from "vue";
 
@@ -116,3 +122,5 @@ watchEffect(() => {
 });
 </script>
 ```
+
+<Giscus />

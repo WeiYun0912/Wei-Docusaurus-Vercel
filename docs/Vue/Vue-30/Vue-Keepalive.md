@@ -14,6 +14,8 @@ og:description: "[vue] KeepAlive 是 Vue 內建的元件，可以緩存動態元
 sidebar_position: 8
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue KeepAlive
 
 ## 簡介
@@ -314,3 +316,5 @@ onUnmounted(() => {
 ## 參考資料
 
 -   [Vue KeepAlive](https://cn.vuejs.org/guide/built-ins/keep-alive)
+
+<Giscus />

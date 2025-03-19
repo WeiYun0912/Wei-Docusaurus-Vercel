@@ -14,6 +14,8 @@ og:description: "Vue 使用 Lottie 動畫"
 sidebar_position: 15
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue 使用 Lottie 動畫
 
 ## 簡介
@@ -150,3 +152,5 @@ const toggleAnimation = () => {
 -   [LottieFiles](https://lottiefiles.com/featured-free-animations)
 -   [Lottie](https://lottiefiles.com/)
 -   [vue3-lottie](https://github.com/megasanjay/vue3-lottie)
+
+<Giscus />

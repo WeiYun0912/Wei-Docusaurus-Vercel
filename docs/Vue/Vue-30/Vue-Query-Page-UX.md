@@ -14,6 +14,8 @@ og:description: "透過 Vue Query 的 placeholderData 與 keepPreviousData，提
 sidebar_position: 25
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # 使用 placeholderData 與 keepPreviousData 提升分頁體驗
 
 不喜歡看字的可以看影片：
@@ -230,3 +232,5 @@ const prevPage = () => {
 ## 參考資料
 
 -   [Vue Query 官方文件](https://tanstack.com/query/latest/docs/framework/vue/guides/placeholder-query-data)
+
+<Giscus />

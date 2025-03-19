@@ -14,6 +14,8 @@ og:description: "Vue Query 是一個 伺服器狀態管理 (Server State Managem
 sidebar_position: 19
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Query 介紹： 讓 API 資料管理更簡單方便
 
 不喜歡看字的可以看影片：
@@ -102,3 +104,5 @@ const { data: todos, isLoading, isError } = useQuery({
 ## 參考資料
 
 -   [Vue Query 官方文件](https://tanstack.com/query/latest/docs/framework/vue/overview)
+
+<Giscus />

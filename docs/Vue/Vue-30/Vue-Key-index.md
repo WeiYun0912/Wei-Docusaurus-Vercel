@@ -14,6 +14,8 @@ og:description: "在 Vue 3 中，v-for 需要 :key 來幫助 Virtual DOM 追蹤�
 sidebar_position: 18
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue 3 使用 index 當 key 的問題
 
 ## 簡介
@@ -114,3 +116,5 @@ const removeItem = (index) => {
     <li v-for="(item, index) in items" :key="index">{{ index + 1 }}. {{ item }}</li>
 </ul>
 ```
+
+<Giscus />

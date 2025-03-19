@@ -14,6 +14,8 @@ og:description: "[vue] 在 Vue 3 開發中，我們大多數時候都使用**單
 sidebar_position: 4
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Render Function
 
 ## 簡介
@@ -188,3 +190,5 @@ import Card from "./components/Card.vue";
 ## 參考資料
 
 -   [Vue 3 官方文檔 - Render Function](https://vuejs.org/guide/extras/render-function)
+
+<Giscus />

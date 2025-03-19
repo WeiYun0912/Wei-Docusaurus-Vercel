@@ -14,6 +14,8 @@ og:description: "透過 Vue Query 的 useMutation 進行樂觀更新，提升 AP
 sidebar_position: 26
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # 使用 `useMutation` 進行樂觀更新 (Optimistic Updates)
 
 不喜歡看字的可以看影片：
@@ -202,3 +204,5 @@ const addTodo = () => {
     </div>
 </template>
 ```
+
+<Giscus />

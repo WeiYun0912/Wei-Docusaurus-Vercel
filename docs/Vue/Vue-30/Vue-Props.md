@@ -14,6 +14,8 @@ og:description: "Vue 3 中如何將 Props 從父元件傳遞到孫元件，並�
 sidebar_position: 11
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue 3：從父元件傳遞 Props 到子元件再到孫元件的常見方法
 
 ## 簡介
@@ -276,3 +278,5 @@ const messageStore = useMessageStore();
 ❌ **缺點**：
 
 -   需要額外的 store 管理
+
+<Giscus />

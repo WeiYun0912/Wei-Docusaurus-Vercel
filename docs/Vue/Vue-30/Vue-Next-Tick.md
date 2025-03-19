@@ -14,6 +14,8 @@ og:description: "在 Vue 3 中，當 ref 或 reactive 變數更新時，Vue 不�
 sidebar_position: 5
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue nextTick 介紹
 
 ## 簡介
@@ -114,3 +116,5 @@ setTimeout(() => {
 -   Vue 的 DOM 更新是非同步的，nextTick() 確保程式碼執行在最新 DOM 之後
 -   適用於需要操作 DOM（如 focus()、scroll()、取得元素大小）
 -   比 setTimeout() 更可靠，確保 Vue 真的完成更新
+
+<Giscus />

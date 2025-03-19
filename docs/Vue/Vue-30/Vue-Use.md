@@ -14,6 +14,8 @@ og:description: "vueuse 是一個針對 Vue 3 Composition API 的實用函式庫
 sidebar_position: 14
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # VueUse
 
 ## 簡介
@@ -189,3 +191,5 @@ const isMobile = computed(() => width.value < 768);
 -   [VueUse 官方文件](https://vueuse.org/guide/)
 -   [VueUse 官方 GitHub](https://github.com/vueuse/vueuse)
 -   [VueUse 原碼](https://github.com/vueuse/vueuse/tree/main/packages/core)
+
+<Giscus />

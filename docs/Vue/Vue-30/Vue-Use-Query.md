@@ -14,6 +14,8 @@ og:description: "useQuery 是 Vue Query 提供的 Hook，可用來自動管理 A
 sidebar_position: 20
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Query 使用 useQuery 來管理 API 資料
 
 不喜歡看字的可以看影片：
@@ -163,3 +165,5 @@ const {
 ## 參考資料
 
 -   [Vue Query 官方文件](https://tanstack.com/query/latest/docs/framework/vue/reference/useQuery)
+
+<Giscus />

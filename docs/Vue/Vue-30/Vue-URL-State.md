@@ -14,6 +14,8 @@ og:description: "在 Vue 項目中，將應用程式狀態（State）放入 URL�
 sidebar_position: 17
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 ## 簡介
 
 在 Vue 應用中，狀態管理通常由 `Pinia`、`Vuex` 或 `Composition API` 內的 `ref()`、`reactive()` 來管理。但在某些場景下，將 State 存入 URL 會更有優勢：
@@ -133,3 +135,5 @@ router.replace({ query: { keyword: searchQuery.value } });
 | 篩選條件             | ✅ query params，可分享 URL         |
 | 分頁                 | ✅ query params，page=1             |
 | 應用模式（深色模式） | ✅ query params 或 localStorage     |
+
+<Giscus />

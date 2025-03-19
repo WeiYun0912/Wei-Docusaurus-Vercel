@@ -14,6 +14,8 @@ og:description: "透過 Vue 3 的 shallowRef，提升效能"
 sidebar_position: 2
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # ** Vue 3 shallowRef 簡易介紹**
 
 ## 簡介
@@ -116,3 +118,5 @@ const forceUpdate = () => {
 -   **API 回應（JSON 結構大，不希望 Vue 深度追蹤）**
 -   **表格、清單數據（不希望每個改動都觸發 Vue 監聽）**
 -   **手動控制何時更新畫面**
+
+<Giscus />

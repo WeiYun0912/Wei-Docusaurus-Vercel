@@ -14,6 +14,8 @@ og:description: "介紹 Vue Query 的 onError 與 retry 機制，幫助我們處
 sidebar_position: 21
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Query 介紹：錯誤處理與重試機制 (Error & Retry)
 
 不喜歡看字的可以看影片：
@@ -163,3 +165,5 @@ const { data, isLoading, isError, error } = useQuery({
 
 -   API 可能失敗，`onError` 幫助我們顯示錯誤訊息，比較常見的做法是在 `onError` 的時候用一些元件顯示錯誤訊息，像是 `Toast` 或 `Alert`
 -   `retry` 讓我們可以自動重試，避免短暫錯誤影響
+
+<Giscus />

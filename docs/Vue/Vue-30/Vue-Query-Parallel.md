@@ -14,6 +14,8 @@ og:description: "透過 Vue Query 的 Parallel Queries，同時執行多個 API 
 sidebar_position: 29
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # 使用 `Parallel Queries` 來處理動態查詢
 
 不喜歡看字的可以看影片：
@@ -123,3 +125,5 @@ const userQueries = useQueries({ queries });
 -   **`Parallel Queries` 讓我們可以同時執行多個 API 查詢，提升載入效能**
 -   **適用於多個 API 查詢的場景，如「使用者、專案、團隊」等資訊同步載入**
 -   **靜態查詢可使用多個 `useQuery`，動態查詢則應使用 `useQueries`**
+
+<Giscus />

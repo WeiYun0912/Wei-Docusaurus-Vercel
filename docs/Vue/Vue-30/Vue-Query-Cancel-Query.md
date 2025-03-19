@@ -14,6 +14,8 @@ og:description: "透過 Vue Query 的 cancelQuery，手動或自動取消 API �
 sidebar_position: 28
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # 使用 `cancelQuery` 來取消 API 請求
 
 不喜歡看字的可以看影片：
@@ -126,3 +128,5 @@ const cancelRequest = () => {
 -   **`cancelQuery` 允許我們手動或自動取消 API 請求，避免浪費資源**
 -   **適用於頁面切換或使用者手動取消請求的場景**
 -   **當 `queryFn` 接收 `signal` 時，Vue Query 可自動取消請求**
+
+<Giscus />

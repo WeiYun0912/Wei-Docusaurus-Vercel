@@ -14,6 +14,8 @@ og:description: "Vue 3 的 Teleport 讓 Modal、Tooltip 能渲染到 body，避�
 sidebar_position: 10
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue3 Teleport 讓 Modal、Tooltip 正確顯示
 
 ## 簡介
@@ -269,3 +271,5 @@ const showModal = ref(false);
 ## 參考資料
 
 [Vue 官方文件](https://cn.vuejs.org/guide/built-ins/teleport#basic-usage)
+
+<Giscus />

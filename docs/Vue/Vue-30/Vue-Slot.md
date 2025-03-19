@@ -8,6 +8,8 @@ og:description: "[vue] 在 Vue 3 開發中，我們可以透過 Slot 來建立�
 sidebar_position: 7
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Slot
 
 ## 簡介
@@ -260,3 +262,5 @@ defineProps({
     </div>
 </template>
 ```
+
+<Giscus />

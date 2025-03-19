@@ -14,6 +14,8 @@ og:description: "Vue Ref、Reactive、Computed"
 sidebar_position: 1
 ---
 
+import Giscus from "@site/src/components/GiscusComponent"
+
 # Vue Ref、Reactive、Computed
 
 ## ref & reactive
@@ -38,7 +40,8 @@ sidebar_position: 1
 
 所以當你有非常多屬性要改變時，需要使用 `Object.assign` 來改變 `car` 的屬性。
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { ref, reactive } from "vue";
 
@@ -86,7 +89,8 @@ function correctChangeCar() {
 
 -   解構賦值的影響：`let { name, age } = person` 的操作只是將 person 物件中的值解構並複製給變數 `name` 和 `age`，這些變數之後與 person 再無關聯，也就是他們只是普通的變數，而不是響應式的 `ref` 或 `reactive`。
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { reactive } from 'vue'
 
@@ -121,7 +125,8 @@ function changeAge(newAge) {
 -   `toRefs` 會將 `person` 物件中的`所有屬性`轉換為響應式的 `ref`。
 -   `toRef` 會將 `person` 物件中的`指定屬性`轉換為響應式的 `ref`。
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { reactive, toRefs, toRef } from 'vue'
 
@@ -150,7 +155,8 @@ function changeAge(newAge) {
 
 如果要把 firstName 的首字母大寫，可以這樣寫：
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { ref } from 'vue'
 
@@ -169,7 +175,8 @@ const lastName = ref('Doe')
 
 但這樣寫的話會不好維護，我們需要讓 template 保持簡潔，所以可以使用 computed 來寫，當 firstName 和 lastName 改變時，computed 會自動更新：
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { ref, computed } from 'vue'
 
@@ -190,7 +197,8 @@ const fullName = computed(() => `${firstName.value.slice(0, 1).toUpperCase() + f
 
 計算屬性只會計算一次，所以當你多次使用時，會得到相同的結果，並不會重新計算。
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { ref, computed } from 'vue'
 
@@ -217,7 +225,8 @@ const fullName = computed(() => `${firstName.value.slice(0, 1).toUpperCase() + f
 
 如果不這麼寫，直接修改 `fullName` 的話，會得到 `[Vue warn] Write operation failed: computed value is readonly` 錯誤。
 
-```js
+<!-- prettier-ignore -->
+```html title='App.vue' showLineNumbers
 <script setup>
 import { ref, computed } from 'vue'
 
@@ -232,3 +241,5 @@ const fullName = computed({
 })
 </script>
 ```
+
+<Giscus />
