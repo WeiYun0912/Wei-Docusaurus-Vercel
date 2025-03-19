@@ -16,6 +16,14 @@ sidebar_position: 21
 
 # Vue Query 介紹：錯誤處理與重試機制 (Error & Retry)
 
+不喜歡看字的可以看影片：
+
+-   [Vue3 教學 - Vue Query Part.1 使用 useQuery 與 useMutation](https://www.youtube.com/watch?v=7MDI54nlEbc)
+-   [Vue3 教學 - Vue Query Part.2 資料生命週期與重新獲取機制 (stale,fresh,paused,inActive)](https://www.youtube.com/watch?v=pxHSArLEvgs)
+-   [Vue3 教學 - Vue Query Part.3 使用 placeholderData 與 keepPreviousData 提升分頁體驗](https://www.youtube.com/watch?v=skJWxXDljS0)
+-   [Vue3 教學 - Vue Query Part.4 使用 useMutation 進行樂觀更新](https://www.youtube.com/watch?v=I-qGvLln-pg)
+-   [Vue3 教學 - Vue Query Part.5 如何使用 enabled 控制查詢與 prefetch 提升使用者體驗](https://www.youtube.com/watch?v=8TpZAL-E6gs)
+
 ## 簡介
 
 在前端開發中，API 請求可能會因為 伺服器錯誤 (500)、網路斷線 (Network Error) 或`請求超時`而失敗。如果沒有妥善處理：
