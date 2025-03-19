@@ -1,5 +1,5 @@
 ---
-title: "[Vue 3] Vue 3.3  defineModel() 介紹"
+title: "[vue] Vue 3.3  defineModel() 介紹"
 
 keywords: [Vue3, defineModel, v-model, script setup]
 
@@ -7,9 +7,11 @@ description: "Vue 3.3 新增 defineModel()，讓子元件 v-model 變得更直�
 
 author: WeiYun0912
 
-og:title: "[Vue 3] defineModel() 讓 v-model 在 <script setup> 更直覺"
+og:title: "[vue] defineModel() 讓 v-model 在 <script setup> 更直覺"
 
 og:description: "Vue 3.3  defineModel() 介紹"
+
+sidebar_position: 12
 ---
 
 # Vue 3.3 defineModel() 介紹

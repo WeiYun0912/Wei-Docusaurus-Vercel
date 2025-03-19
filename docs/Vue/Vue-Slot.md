@@ -10,6 +10,8 @@ author: WeiYun0912
 og:title: Vue Slot 用法
 
 og:description: Vue Slot 用法
+
+sidebar_position: 7
 ---
 
 ## 說明
@@ -36,10 +38,10 @@ import AppCourseCard from './AppCourseCard.vue'
 
 ```jsx title='AppCourseCard.vue' showLineNumbers
 <template>
-  <h1>AppCourseCard</h1>
-  <div>
-    <slot></slot>
-  </div>
+    <h1>AppCourseCard</h1>
+    <div>
+        <slot></slot>
+    </div>
 </template>
 ```
 
@@ -64,12 +66,12 @@ import AppCourseCard from './AppCourseCard.vue'
 
 ```jsx title='AppCourseCard.vue' showLineNumbers
 <template>
-  <h1>AppCourseCard</h1>
-  <div>
-    <slot>
-      <b>沒有傳入子元素</b>
-    </slot>
-  </div>
+    <h1>AppCourseCard</h1>
+    <div>
+        <slot>
+            <b>沒有傳入子元素</b>
+        </slot>
+    </div>
 </template>
 ```
 
@@ -102,13 +104,13 @@ import AppCourseCard from './AppCourseCard.vue'
 
 ```jsx title='AppCourseCard.vue' showLineNumbers
 <template>
-  <h1>AppCourseCard</h1>
-  <div>
-    <slot name="title"></slot>
-  </div>
-  <div>
-    <slot name="description"></slot>
-  </div>
+    <h1>AppCourseCard</h1>
+    <div>
+        <slot name="title"></slot>
+    </div>
+    <div>
+        <slot name="description"></slot>
+    </div>
 </template>
 ```
 

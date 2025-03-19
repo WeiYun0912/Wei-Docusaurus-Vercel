@@ -11,7 +11,7 @@ og:title: "[vue] Vue Query 介紹： 使用 useMutation 來發送 API 請求"
 
 og:description: "useMutation 是 Vue Query 提供的 Hook，可用來處理非同步 API 變更，例如新增、更新與刪除"
 
-sidebar_position: 4
+sidebar_position: 24
 ---
 
 # Vue Query 使用 useMutation 來處理 API 變更

@@ -11,7 +11,7 @@ og:title: "[vue] Vue Query 介紹： 使用 Parallel Queries 來處理動態查�
 
 og:description: "透過 Vue Query 的 Parallel Queries，同時執行多個 API 查詢，提高效能與使用者體驗"
 
-sidebar_position: 9
+sidebar_position: 29
 ---
 
 # 使用 `Parallel Queries` 來處理動態查詢
@@ -106,7 +106,7 @@ const userQueries = useQueries({ queries });
 | ------------ | ----------------------- | ------------------------------- |
 | **適用場景** | 固定數量的 API 查詢     | 動態數量的 API 查詢             |
 | **查詢方式** | 手動宣告多個 `useQuery` | 傳遞陣列給 `useQueries`         |
-| **優勢**     | 易讀易寫，適合靜態查詢  | 適合動態列表，不違反 Hooks 規則 |
+| **優勢**     | 易讀易寫，適合靜態查詢  | 適合動態清單，不違反 Hooks 規則 |
 
 ---
 

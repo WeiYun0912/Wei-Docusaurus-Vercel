@@ -1,10 +1,17 @@
 ---
 title: "[vue] Vue Render Function"
+
 keywords: [vue3, vue]
+
 description: 在 Vue 3 開發中，我們大多數時候都使用**單檔案元件**（SFC，Single File Component）來開發 UI。但在某些情境下，使用**渲染函式**（Render Function）可以提供更大的靈活性，甚至解決一些難以用模板（template）實現的需求。
+
 author: WeiYun0912
+
 og:title: "[vue] Vue Render Function"
+
 og:description: "[vue] 在 Vue 3 開發中，我們大多數時候都使用**單檔案元件**（SFC，Single File Component）來開發 UI。但在某些情境下，使用**渲染函式**（Render Function）可以提供更大的靈活性，甚至解決一些難以用模板（template）實現的需求。"
+
+sidebar_position: 4
 ---
 
 # Vue Render Function

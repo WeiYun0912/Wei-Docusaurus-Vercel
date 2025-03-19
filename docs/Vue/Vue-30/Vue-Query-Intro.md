@@ -11,7 +11,7 @@ og:title: "[vue] Vue Query 介紹： 讓 API 資料管理更簡單方便"
 
 og:description: "Vue Query 是一個 伺服器狀態管理 (Server State Management) 工具"
 
-sidebar_position: 1
+sidebar_position: 19
 ---
 
 # Vue Query 介紹： 讓 API 資料管理更簡單方便

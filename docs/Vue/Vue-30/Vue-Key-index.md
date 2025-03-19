@@ -1,5 +1,5 @@
 ---
-title: "[Vue] Vue 3 使用 index 當 key 的問題"
+title: "[vue] Vue 使用 index 當 key 的問題"
 
 keywords: [Vue3, Key, v-for, Virtual DOM, 效能]
 
@@ -7,9 +7,11 @@ description: "在 Vue 3 中，v-for 需要 :key 來幫助 Virtual DOM 追蹤元�
 
 author: WeiYun0912
 
-og:title: "[Vue] Vue 3 使用 index 當 key 的問題"
+og:title: "[vue] Vue 使用 index 當 key 的問題"
 
 og:description: "在 Vue 3 中，v-for 需要 :key 來幫助 Virtual DOM 追蹤元素，但錯誤的 :key（特別是 index）可能會導致非預期的行為與效能問題。"
+
+sidebar_position: 18
 ---
 
 # Vue 3 使用 index 當 key 的問題

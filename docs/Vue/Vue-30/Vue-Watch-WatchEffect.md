@@ -10,6 +10,8 @@ author: WeiYun0912
 og:title: "[vue, watch, watchEffect] Vue Watch 和 WatchEffect"
 
 og:description: "Vue Watch 和 WatchEffect"
+
+sidebar_position: 3
 ---
 
 # Vue Watch 和 WatchEffect

@@ -10,6 +10,8 @@ author: WeiYun0912
 og:title: "[vue] 使用 KeepAlive 讓元件保持狀態，避免重置"
 
 og:description: "[vue] KeepAlive 是 Vue 內建的元件，可以緩存動態元件，避免元件切換時重新渲染。本篇介紹 KeepAlive 的使用方式、適用場景、與常見問題。"
+
+sidebar_position: 8
 ---
 
 # Vue KeepAlive

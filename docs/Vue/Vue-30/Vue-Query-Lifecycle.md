@@ -11,7 +11,7 @@ og:title: "[vue] Vue Query 介紹： Vue Query 資料生命週期介紹"
 
 og:description: "Vue Query 資料生命週期介紹(stale,fresh,paused,inActive)"
 
-sidebar_position: 3
+sidebar_position: 23
 ---
 
 # Vue Query 資料生命週期介紹

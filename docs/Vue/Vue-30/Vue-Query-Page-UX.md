@@ -11,7 +11,7 @@ og:title: "[vue] Vue Query 介紹： 使用 placeholderData 與 keepPreviousData
 
 og:description: "透過 Vue Query 的 placeholderData 與 keepPreviousData，提升 API 分頁的使用體驗"
 
-sidebar_position: 5
+sidebar_position: 25
 ---
 
 # 使用 placeholderData 與 keepPreviousData 提升分頁體驗

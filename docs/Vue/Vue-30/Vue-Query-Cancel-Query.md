@@ -1,5 +1,5 @@
 ---
-title: "[vue] 使用 cancelQuery 來取消 API 請求"
+title: "[vue] Vue Query 介紹： 使用 cancelQuery 來取消 API 請求"
 
 keywords: [Vue3, tanstack, useQuery, cancelQuery, 取消請求]
 
@@ -11,7 +11,7 @@ og:title: "[vue] 使用 cancelQuery 來取消 API 請求"
 
 og:description: "透過 Vue Query 的 cancelQuery，手動或自動取消 API 請求，提升效能與使用者體驗"
 
-sidebar_position: 8
+sidebar_position: 28
 ---
 
 # 使用 `cancelQuery` 來取消 API 請求

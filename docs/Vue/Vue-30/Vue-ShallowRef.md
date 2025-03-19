@@ -10,6 +10,8 @@ author: WeiYun0912
 og:title: "[vue] Vue3 shallowRef 簡易介紹"
 
 og:description: "透過 Vue 3 的 shallowRef，提升效能"
+
+sidebar_position: 2
 ---
 
 # ** Vue 3 shallowRef 簡易介紹**

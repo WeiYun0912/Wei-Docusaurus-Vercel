@@ -10,6 +10,8 @@ author: WeiYun0912
 og:title: "[vue, vueuse] VueUse 介紹"
 
 og:description: "vueuse 是一個針對 Vue 3 Composition API 的實用函式庫，提供了 200+ 個 Hooks，讓我們更簡單地處理 狀態管理、事件監聽、計時器、瀏覽器 API 等，非常豐富。"
+
+sidebar_position: 14
 ---
 
 # VueUse

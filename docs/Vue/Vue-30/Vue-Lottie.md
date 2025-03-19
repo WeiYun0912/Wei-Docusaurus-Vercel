@@ -7,9 +7,11 @@ description: Vue 使用 Lottie 動畫 。
 
 author: WeiYun0912
 
-og:title: "[vue, lottie] Vue Vue 使用 Lottie 動畫"
+og:title: "[vue, lottie] Vue 使用 Lottie 動畫"
 
-og:description: "Vue 使用 Lottie 動畫，"
+og:description: "Vue 使用 Lottie 動畫"
+
+sidebar_position: 15
 ---
 
 # Vue 使用 Lottie 動畫

@@ -11,7 +11,7 @@ og:title: "[vue] 使用 prefetchQuery 來預先載入資料"
 
 og:description: "透過 Vue Query 的 prefetchQuery，提前載入 API 資料，提升使用者體驗"
 
-sidebar_position: 7
+sidebar_position: 27
 ---
 
 # 使用 `prefetchQuery` 來預先載入資料

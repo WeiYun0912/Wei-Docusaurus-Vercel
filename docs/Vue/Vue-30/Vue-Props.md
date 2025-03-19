@@ -1,5 +1,5 @@
 ---
-title: "[vue] Vue 3 父元件傳遞 Props 到孫元件的 4 種常見方法"
+title: "[vue] Vue 父元件傳遞 Props 到孫元件的 4 種常見方法"
 
 keywords: [vue3, Props, provide/inject, Pinia]
 
@@ -7,9 +7,11 @@ description: Vue 3 中如何將 Props 從父元件傳遞到孫元件，並介紹
 
 author: WeiYun0912
 
-og:title: "[vue] Vue 3 父元件傳遞 Props 到孫元件的 4 種常見方法"
+og:title: "[vue] Vue 父元件傳遞 Props 到孫元件的 4 種常見方法"
 
 og:description: "Vue 3 中如何將 Props 從父元件傳遞到孫元件，並介紹 4 種不同的方式來處理這個需求。"
+
+sidebar_position: 11
 ---
 
 # Vue 3：從父元件傳遞 Props 到子元件再到孫元件的常見方法
@@ -38,7 +40,8 @@ og:description: "Vue 3 中如何將 Props 從父元件傳遞到孫元件，並�
 
 ### 例子
 
-```js
+<!-- prettier-ignore -->
+```html title='Parent.vue' showLineNumbers
 <!-- Parent.vue -->
 <script setup>
 import Child from "./Child.vue";
@@ -54,7 +57,8 @@ const message = "來自 Parent.vue 的訊息";
 </template>
 ```
 
-```js
+<!-- prettier-ignore -->
+```html title='Child.vue' showLineNumbers
 <!-- Child.vue -->
 <script setup>
 import GrandChild from "./GrandChild.vue";
@@ -69,7 +73,8 @@ defineProps(["message"]);
 </template>
 ```
 
-```js
+<!-- prettier-ignore -->
+```html title='GrandChild.vue' showLineNumbers
 <!-- GrandChild.vue -->
 <script setup>
 defineProps(["message"]);
@@ -106,7 +111,8 @@ Vue 3 提供 `useAttrs()`，可以讓我們 **自動將未定義的 `props` 傳�
 
 ### 例子
 
-```js
+<!-- prettier-ignore -->
+```html title='Parent.vue' showLineNumbers
 <!-- Parent.vue -->
 <script setup>
 import Child from "./Child.vue";
@@ -122,7 +128,8 @@ const message = "來自 Parent.vue 的訊息";
 </template>
 ```
 
-```js
+<!-- prettier-ignore -->
+```html title='Child.vue' showLineNumbers
 <!-- Child.vue -->
 <script setup>
 import GrandChild from "./GrandChild.vue";
@@ -139,7 +146,8 @@ const attrs = useAttrs();
 </template>
 ```
 
-```js
+<!-- prettier-ignore -->
+```html title='GrandChild.vue' showLineNumbers
 <!-- GrandChild.vue -->
 <script setup>
 defineProps(["message"]);
@@ -174,7 +182,8 @@ defineProps(["message"]);
 
 ### 例子
 
-```js
+<!-- prettier-ignore -->
+```html title='Parent.vue' showLineNumbers
 <!-- Parent.vue -->
 <script setup>
 import { provide } from "vue";
@@ -192,7 +201,8 @@ provide("message", message);
 </template>
 ```
 
-```js
+<!-- prettier-ignore -->
+```html title='Child.vue' showLineNumbers
 <!-- GrandChild.vue -->
 <script setup>
 import { inject } from "vue";
@@ -229,7 +239,8 @@ const message = inject("message");
 
 ### 例子
 
-```js
+<!-- prettier-ignore -->
+```js title='stores/useMessageStore.js' showLineNumbers
 // stores/useMessageStore.js
 import { defineStore } from "pinia";
 import { ref } from "vue";
@@ -240,7 +251,8 @@ export const useMessageStore = defineStore("message", () => {
 });
 ```
 
-```js
+<!-- prettier-ignore -->
+```html title='GrandChild.vue' showLineNumbers
 <!-- GrandChild.vue -->
 <script setup>
 import { useMessageStore } from "../stores/useMessageStore";

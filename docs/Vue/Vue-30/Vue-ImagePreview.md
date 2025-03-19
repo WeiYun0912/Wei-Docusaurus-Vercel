@@ -1,5 +1,5 @@
 ---
-title: "[Vue] 使用 vue-easy-lightbox 實現圖片預覽"
+title: "[vue] 使用 vue-easy-lightbox 實現圖片預覽"
 
 keywords: [Vue3, vue-easy-lightbox, 圖片預覽]
 
@@ -10,6 +10,8 @@ author: WeiYun0912
 og:title: "[vue] 使用 vue-easy-lightbox 實現圖片預覽"
 
 og:description: "使用 vue-easy-lightbox 實現圖片預覽，支援放大、縮小、旋轉、恢復原始大小，也可以左右切換圖片。"
+
+sidebar_position: 16
 ---
 
 # 使用 vue-easy-lightbox 實現圖片預覽

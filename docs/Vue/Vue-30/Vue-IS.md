@@ -11,7 +11,7 @@ og:title: "[vue] Vue :is 的常見用法"
 
 og:description: "透過 Vue 的 :is 屬性，讓元件可以根據不同的需求切換標籤或元件，提高靈活性與可重用性。"
 
-sidebar_position: 8
+sidebar_position: 6
 ---
 
 # Vue `:is` 的常見用法

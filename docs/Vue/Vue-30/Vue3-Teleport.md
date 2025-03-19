@@ -10,6 +10,8 @@ author: WeiYun0912
 og:title: "[Vue 3] Teleport 讓 Modal、Tooltip 正確顯示"
 
 og:description: "Vue 3 的 Teleport 讓 Modal、Tooltip 能渲染到 body，避免 z-index、overflow: hidden 問題，並透過程式碼比較用與不用的差異。"
+
+sidebar_position: 10
 ---
 
 # Vue3 Teleport 讓 Modal、Tooltip 正確顯示

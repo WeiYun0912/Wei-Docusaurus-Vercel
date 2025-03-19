@@ -11,7 +11,7 @@ og:title: "[vue] Vue Query 介紹： 使用 Dependent Queries 與 Disabling Quer
 
 og:description: "透過 Vue Query 的 Dependent Queries 來處理依賴查詢，並使用 Disabling Queries 控制請求行為，提高效能與使用者體驗"
 
-sidebar_position: 10
+sidebar_position: 30
 ---
 
 # 使用 `Dependent Queries` 與 `Disabling Queries` 來優化 API 查詢

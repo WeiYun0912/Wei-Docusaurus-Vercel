@@ -1,5 +1,5 @@
 ---
-title: "[Vue] Vue 將 State 放入 URL 的好處與實作方式"
+title: "[vue] Vue 將 State 放入 URL 的好處與實作方式"
 
 keywords: [Vue3, State, URL, Query Params, Vue Router, 狀態管理]
 
@@ -7,9 +7,11 @@ description: "在 Vue 項目中，將應用程式狀態（State）放入 URL，�
 
 author: WeiYun0912
 
-og:title: "[Vue] Vue 將 State 放入 URL 的好處與實作方式"
+og:title: "[vue] Vue 將 State 放入 URL 的好處與實作方式"
 
 og:description: "在 Vue 項目中，將應用程式狀態（State）放入 URL，可以讓使用者直接分享當前狀態、支援瀏覽器返回功能、並減少 Vuex/Pinia 依賴。"
+
+sidebar_position: 17
 ---
 
 ## 簡介

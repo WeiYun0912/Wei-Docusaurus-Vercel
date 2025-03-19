@@ -11,7 +11,7 @@ og:title: "[vue] Vue Query 介紹： 使用 useMutation 進行樂觀更新 (Opti
 
 og:description: "透過 Vue Query 的 useMutation 進行樂觀更新，提升 API 資料變更時的使用者體驗"
 
-sidebar_position: 6
+sidebar_position: 26
 ---
 
 # 使用 `useMutation` 進行樂觀更新 (Optimistic Updates)

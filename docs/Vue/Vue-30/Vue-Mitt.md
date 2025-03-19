@@ -10,6 +10,8 @@ author: WeiYun0912
 og:title: "[vue, mitt] Vue 使用 mitt 進行跨元件溝通"
 
 og:description: "Vue 使用 mitt 進行跨元件溝通"
+
+sidebar_position: 13
 ---
 
 # Vue 使用 mitt 進行跨元件溝通

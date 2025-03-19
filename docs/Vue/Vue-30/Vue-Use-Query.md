@@ -11,7 +11,7 @@ og:title: "[vue] Vue Query 介紹： 使用 useQuery 來管理 API 資料"
 
 og:description: "useQuery 是 Vue Query 提供的 Hook，可用來自動管理 API 資料的取得與狀態"
 
-sidebar_position: 2
+sidebar_position: 20
 ---
 
 # Vue Query 使用 useQuery 來管理 API 資料
